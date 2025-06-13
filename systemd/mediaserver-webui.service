@@ -1,0 +1,17 @@
+[Unit]
+Description=Media Server Web UI
+After=network.target mediaserver.service
+Wants=mediaserver.service
+
+[Service]
+Type=simple
+User=matthewhans
+Group=matthewhans
+WorkingDirectory=/home/matthewhans/mediaserver-enhanced/web_ui
+ExecStart=/home/matthewhans/mediaserver-enhanced/web_ui/venv/bin/python /home/matthewhans/mediaserver-enhanced/web_ui/app.py
+Restart=always
+RestartSec=10
+Environment="PATH=/home/matthewhans/mediaserver-enhanced/web_ui/venv/bin:/usr/local/bin:/usr/bin:/bin"
+
+[Install]
+WantedBy=multi-user.target
