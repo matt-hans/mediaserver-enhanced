@@ -1,0 +1,296 @@
+#\!/usr/bin/env python3
+"""
+Multi-Indexer Torrent Search Script
+Searches across all configured Jackett indexers
+"""
+
+import requests
+import json
+import base64
+import sys
+from urllib.parse import quote_plus
+
+# Configuration
+JACKETT_API_KEY = "g0a8u9ri90ezjjw54grllpaflsgfgcnc"
+JACKETT_URL = "http://localhost:9117"
+TRANSMISSION_USER = "admin"
+TRANSMISSION_PASS = "invent-creat3"
+TRANSMISSION_URL = "http://localhost:9091/transmission/rpc"
+
+# Available indexers
+INDEXERS = [
+    {"name": "1337x", "type": "general"},
+    {"name": "eztv", "type": "tv"},
+    {"name": "thepiratebay", "type": "general"},
+    {"name": "therarbg", "type": "general"},
+    {"name": "yts", "type": "movies"}
+]
+
+class Colors:
+    RED = "\033[0;31m"
+    GREEN = "\033[0;32m"
+    YELLOW = "\033[1;33m"
+    BLUE = "\033[0;34m"
+    PURPLE = "\033[0;35m"
+    CYAN = "\033[0;36m"
+    NC = "\033[0m"
+
+def format_size(size):
+    """Format file size in human readable format"""
+    if size >= 1073741824:
+        return f"{size/1073741824:.1f} GB"
+    elif size >= 1048576:
+        return f"{size/1048576:.1f} MB"
+    elif size >= 1024:
+        return f"{size/1024:.1f} KB"
+    else:
+        return f"{size} B"
+
+def get_transmission_session():
+    """Get Transmission session ID"""
+    try:
+        response = requests.get(TRANSMISSION_URL, auth=(TRANSMISSION_USER, TRANSMISSION_PASS))
+        session_id = response.headers.get("X-Transmission-Session-Id")
+        return session_id
+    except:
+        return None
+
+def search_indexer(indexer_name, query, category=""):
+    """Search a specific indexer"""
+    # Construct URL for specific indexer
+    url = f"{JACKETT_URL}/api/v2.0/indexers/{indexer_name}/results"
+    params = {
+        "apikey": JACKETT_API_KEY,
+        "q": query
+    }
+    
+    # Add category if specified
+    if category:
+        params["cat"] = category
+    
+    try:
+        response = requests.get(url, params=params, timeout=10)
+        if response.status_code == 200:
+            data = response.json()
+            return data.get("Results", [])
+    except:
+        pass
+    
+    return []
+
+def search_all_indexers(query, category_filter=None):
+    """Search across all configured indexers"""
+    print(f"{Colors.BLUE}Searching for: {Colors.YELLOW}{query}{Colors.NC}")
+    print(f"{Colors.CYAN}Querying indexers...{Colors.NC}")
+    
+    all_results = []
+    
+    for indexer in INDEXERS:
+        # Skip indexer if category filter doesnt match
+        if category_filter:
+            if category_filter == "movie" and indexer["type"] not in ["general", "movies"]:
+                continue
+            if category_filter == "tv" and indexer["type"] not in ["general", "tv"]:
+                continue
+        
+        print(f"  Searching {indexer['name']}...", end="", flush=True)
+        
+        results = search_indexer(indexer["name"], query)
+        if results:
+            print(f" {Colors.GREEN}✓ {len(results)} results{Colors.NC}")
+            all_results.extend(results)
+        else:
+            print(f" {Colors.YELLOW}✗ No results{Colors.NC}")
+    
+    # Sort by seeders (highest first)
+    all_results.sort(key=lambda x: x.get("Seeders", 0), reverse=True)
+    
+    # Remove duplicates based on title
+    seen_titles = set()
+    unique_results = []
+    for result in all_results:
+        title = result.get("Title", "")
+        if title not in seen_titles:
+            seen_titles.add(title)
+            unique_results.append(result)
+    
+    return unique_results
+
+def display_results(results, query):
+    """Display search results"""
+    if not results:
+        print(f"\\n{Colors.YELLOW}No results found for \"{query}\"{Colors.NC}")
+        return
+    
+    print(f"\\n{Colors.GREEN}Found {len(results)} unique results:{Colors.NC}\\n")
+    
+    # Display first 30 results
+    for i, result in enumerate(results[:30], 1):
+        title = result.get("Title", "Unknown")
+        size = result.get("Size", 0)
+        seeders = result.get("Seeders", 0)
+        peers = result.get("Peers", 0)
+        tracker = result.get("Tracker", "Unknown")
+        
+        size_str = format_size(size)
+        
+        # Color code by seeders
+        if seeders > 20:
+            seed_color = Colors.GREEN
+        elif seeders > 5:
+            seed_color = Colors.YELLOW
+        else:
+            seed_color = Colors.RED
+        
+        print(f"{i:2d}. {title[:70]}")
+        print(f"    Size: {size_str:<12} Seeds: {seed_color}{seeders:<4}{Colors.NC} Peers: {peers:<4} [{tracker}]")
+        print()
+    
+    if len(results) > 30:
+        print(f"{Colors.CYAN}(Showing first 30 of {len(results)} results){Colors.NC}\\n")
+
+def download_torrent(results, selection):
+    """Download selected torrent to Transmission"""
+    try:
+        selection_idx = int(selection) - 1
+        if selection_idx < 0 or selection_idx >= min(30, len(results)):
+            print(f"{Colors.RED}Error: Invalid selection{Colors.NC}")
+            return False
+            
+        selected_torrent = results[selection_idx]
+        torrent_url = selected_torrent.get("Link", "")
+        title = selected_torrent.get("Title", "Unknown")
+        
+        if not torrent_url:
+            print(f"{Colors.RED}Error: No download link available{Colors.NC}")
+            return False
+            
+        print(f"\\n{Colors.CYAN}Downloading: {title[:70]}...{Colors.NC}")
+        
+        # Get session ID
+        session_id = get_transmission_session()
+        if not session_id:
+            print(f"{Colors.RED}Error: Could not get Transmission session{Colors.NC}")
+            return False
+        
+        # Download torrent file
+        try:
+            torrent_response = requests.get(torrent_url, timeout=30)
+            torrent_response.raise_for_status()
+            torrent_data = base64.b64encode(torrent_response.content).decode("utf-8")
+        except Exception as e:
+            print(f"{Colors.RED}Error: Failed to download torrent file - {e}{Colors.NC}")
+            return False
+        
+        # Add to Transmission
+        headers = {
+            "X-Transmission-Session-Id": session_id,
+            "Content-Type": "application/json"
+        }
+        
+        request_data = {
+            "method": "torrent-add",
+            "arguments": {
+                "metainfo": torrent_data
+            }
+        }
+        
+        try:
+            response = requests.post(
+                TRANSMISSION_URL,
+                auth=(TRANSMISSION_USER, TRANSMISSION_PASS),
+                headers=headers,
+                json=request_data,
+                timeout=30
+            )
+            response.raise_for_status()
+            result = response.json()
+            
+            if result.get("result") == "success":
+                print(f"{Colors.GREEN}✓ Torrent added to Transmission successfully\!{Colors.NC}")
+                print(f"{Colors.BLUE}Check your downloads at: http://192.168.2.2:9091{Colors.NC}")
+                return True
+            else:
+                error_msg = result.get("result", "Unknown error")
+                print(f"{Colors.RED}Error: Failed to add torrent - {error_msg}{Colors.NC}")
+                return False
+                
+        except Exception as e:
+            print(f"{Colors.RED}Error: Failed to communicate with Transmission - {e}{Colors.NC}")
+            return False
+            
+    except ValueError:
+        print(f"{Colors.RED}Error: Please enter a valid number{Colors.NC}")
+        return False
+
+def main():
+    """Main script logic"""
+    print(f"{Colors.GREEN}=== Multi-Indexer Torrent Search Tool ==={Colors.NC}")
+    print(f"{Colors.BLUE}Available indexers: 1337x, eztv, thepiratebay, therarbg, yts{Colors.NC}")
+    print()
+    
+    while True:
+        print(f"{Colors.YELLOW}Options:{Colors.NC}")
+        print("1. Search for torrents")
+        print("2. Exit")
+        print()
+        
+        try:
+            choice = input("Choose an option (1-2): ").strip()
+        except KeyboardInterrupt:
+            print(f"\\n{Colors.GREEN}Goodbye\!{Colors.NC}")
+            sys.exit(0)
+        
+        if choice == "1":
+            print()
+            try:
+                query = input("Enter search query: ").strip()
+                if not query:
+                    print(f"{Colors.RED}Error: Please enter a search query{Colors.NC}")
+                    continue
+                
+                print()
+                print(f"{Colors.YELLOW}Filter by category?{Colors.NC}")
+                print("1. All categories")
+                print("2. Movies only")
+                print("3. TV Shows only")
+                print()
+                
+                cat_choice = input("Choose category (1-3, default 1): ").strip()
+                
+                category_filter = None
+                if cat_choice == "2":
+                    category_filter = "movie"
+                elif cat_choice == "3":
+                    category_filter = "tv"
+                
+                print()
+                results = search_all_indexers(query, category_filter)
+                display_results(results, query)
+                
+                if results:
+                    selection = input("Enter number to download (or press Enter to skip): ").strip()
+                    
+                    if selection:
+                        download_torrent(results, selection)
+                
+                print()
+                
+            except KeyboardInterrupt:
+                print(f"\\n{Colors.YELLOW}Search cancelled.{Colors.NC}")
+                print()
+                
+        elif choice == "2":
+            print(f"{Colors.GREEN}Goodbye\!{Colors.NC}")
+            break
+            
+        else:
+            print(f"{Colors.RED}Invalid option. Please choose 1-2.{Colors.NC}")
+            print()
+
+if __name__ == "__main__":
+    try:
+        main()
+    except KeyboardInterrupt:
+        print(f"\\n{Colors.GREEN}Goodbye\!{Colors.NC}")
+        sys.exit(0)

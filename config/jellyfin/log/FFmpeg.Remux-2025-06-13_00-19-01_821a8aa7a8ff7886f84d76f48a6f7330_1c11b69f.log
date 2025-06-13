@@ -1,0 +1,218 @@
+{"Protocol":0,"Id":"821a8aa7a8ff7886f84d76f48a6f7330","Path":"/media/movies/The Infected/The Infected.mkv","EncoderPath":null,"EncoderProtocol":null,"Type":0,"Container":"mkv","Size":61395155,"Name":"The Infected","IsRemote":false,"ETag":"d3a481173aaf6e39315e2efc53c2d7e1","RunTimeTicks":4173630000,"ReadAtNativeFramerate":false,"IgnoreDts":false,"IgnoreIndex":false,"GenPtsInput":false,"SupportsTranscoding":true,"SupportsDirectStream":true,"SupportsDirectPlay":true,"IsInfiniteStream":false,"UseMostCompatibleTranscodingProfile":false,"RequiresOpening":false,"OpenToken":null,"RequiresClosing":false,"LiveStreamId":null,"BufferMs":null,"RequiresLooping":false,"SupportsProbing":true,"VideoType":0,"IsoType":null,"Video3DFormat":null,"MediaStreams":[{"Codec":"hevc","CodecTag":null,"Language":null,"ColorRange":null,"ColorSpace":null,"ColorTransfer":null,"ColorPrimaries":null,"DvVersionMajor":null,"DvVersionMinor":null,"DvProfile":null,"DvLevel":null,"RpuPresentFlag":null,"ElPresentFlag":null,"BlPresentFlag":null,"DvBlSignalCompatibilityId":null,"Rotation":null,"Comment":null,"TimeBase":"1/1000","CodecTimeBase":null,"Title":null,"VideoRange":1,"VideoRangeType":1,"VideoDoViTitle":null,"AudioSpatialFormat":0,"LocalizedUndefined":null,"LocalizedDefault":null,"LocalizedForced":null,"LocalizedExternal":null,"LocalizedHearingImpaired":null,"DisplayTitle":"480p HEVC SDR","NalLengthSize":null,"IsInterlaced":false,"IsAVC":false,"ChannelLayout":null,"BitRate":1176820,"BitDepth":10,"RefFrames":1,"PacketLength":null,"Channels":null,"SampleRate":null,"IsDefault":true,"IsForced":false,"IsHearingImpaired":false,"Height":480,"Width":720,"AverageFrameRate":29.97003,"RealFrameRate":29.97003,"ReferenceFrameRate":29.97003,"Profile":"Main 10","Type":1,"AspectRatio":"16:9","Index":0,"Score":null,"IsExternal":false,"DeliveryMethod":null,"DeliveryUrl":null,"IsExternalUrl":null,"IsTextSubtitleStream":false,"SupportsExternalStream":false,"Path":null,"PixelFormat":"yuv420p10le","Level":90,"IsAnamorphic":false},{"Codec":"aac","CodecTag":null,"Language":"eng","ColorRange":null,"ColorSpace":null,"ColorTransfer":null,"ColorPrimaries":null,"DvVersionMajor":null,"DvVersionMinor":null,"DvProfile":null,"DvLevel":null,"RpuPresentFlag":null,"ElPresentFlag":null,"BlPresentFlag":null,"DvBlSignalCompatibilityId":null,"Rotation":null,"Comment":null,"TimeBase":"1/1000","CodecTimeBase":null,"Title":null,"VideoRange":0,"VideoRangeType":0,"VideoDoViTitle":null,"AudioSpatialFormat":0,"LocalizedUndefined":null,"LocalizedDefault":"Default","LocalizedForced":null,"LocalizedExternal":"External","LocalizedHearingImpaired":null,"DisplayTitle":"English - HE-AAC - Stereo - Default","NalLengthSize":null,"IsInterlaced":false,"IsAVC":false,"ChannelLayout":"stereo","BitRate":65890,"BitDepth":null,"RefFrames":null,"PacketLength":null,"Channels":2,"SampleRate":48000,"IsDefault":true,"IsForced":false,"IsHearingImpaired":false,"Height":null,"Width":null,"AverageFrameRate":null,"RealFrameRate":null,"ReferenceFrameRate":null,"Profile":"HE-AAC","Type":0,"AspectRatio":null,"Index":1,"Score":null,"IsExternal":false,"DeliveryMethod":null,"DeliveryUrl":null,"IsExternalUrl":null,"IsTextSubtitleStream":false,"SupportsExternalStream":false,"Path":null,"PixelFormat":null,"Level":0,"IsAnamorphic":null},{"Codec":"DVDSUB","CodecTag":null,"Language":"eng","ColorRange":null,"ColorSpace":null,"ColorTransfer":null,"ColorPrimaries":null,"DvVersionMajor":null,"DvVersionMinor":null,"DvProfile":null,"DvLevel":null,"RpuPresentFlag":null,"ElPresentFlag":null,"BlPresentFlag":null,"DvBlSignalCompatibilityId":null,"Rotation":null,"Comment":null,"TimeBase":"1/1000","CodecTimeBase":null,"Title":null,"VideoRange":0,"VideoRangeType":0,"VideoDoViTitle":null,"AudioSpatialFormat":0,"LocalizedUndefined":"Undefined","LocalizedDefault":"Default","LocalizedForced":"Forced","LocalizedExternal":"External","LocalizedHearingImpaired":"Hearing Impaired","DisplayTitle":"English - DVDSUB","NalLengthSize":null,"IsInterlaced":false,"IsAVC":false,"ChannelLayout":null,"BitRate":null,"BitDepth":null,"RefFrames":null,"PacketLength":null,"Channels":null,"SampleRate":null,"IsDefault":false,"IsForced":false,"IsHearingImpaired":false,"Height":480,"Width":720,"AverageFrameRate":null,"RealFrameRate":null,"ReferenceFrameRate":null,"Profile":null,"Type":2,"AspectRatio":null,"Index":2,"Score":null,"IsExternal":false,"DeliveryMethod":null,"DeliveryUrl":null,"IsExternalUrl":null,"IsTextSubtitleStream":false,"SupportsExternalStream":false,"Path":null,"PixelFormat":null,"Level":0,"IsAnamorphic":null},{"Codec":"DVDSUB","CodecTag":null,"Language":"ger","ColorRange":null,"ColorSpace":null,"ColorTransfer":null,"ColorPrimaries":null,"DvVersionMajor":null,"DvVersionMinor":null,"DvProfile":null,"DvLevel":null,"RpuPresentFlag":null,"ElPresentFlag":null,"BlPresentFlag":null,"DvBlSignalCompatibilityId":null,"Rotation":null,"Comment":null,"TimeBase":"1/1000","CodecTimeBase":null,"Title":null,"VideoRange":0,"VideoRangeType":0,"VideoDoViTitle":null,"AudioSpatialFormat":0,"LocalizedUndefined":"Undefined","LocalizedDefault":"Default","LocalizedForced":"Forced","LocalizedExternal":"External","LocalizedHearingImpaired":"Hearing Impaired","DisplayTitle":"Ger - DVDSUB","NalLengthSize":null,"IsInterlaced":false,"IsAVC":false,"ChannelLayout":null,"BitRate":null,"BitDepth":null,"RefFrames":null,"PacketLength":null,"Channels":null,"SampleRate":null,"IsDefault":false,"IsForced":false,"IsHearingImpaired":false,"Height":480,"Width":720,"AverageFrameRate":null,"RealFrameRate":null,"ReferenceFrameRate":null,"Profile":null,"Type":2,"AspectRatio":null,"Index":3,"Score":null,"IsExternal":false,"DeliveryMethod":null,"DeliveryUrl":null,"IsExternalUrl":null,"IsTextSubtitleStream":false,"SupportsExternalStream":false,"Path":null,"PixelFormat":null,"Level":0,"IsAnamorphic":null},{"Codec":"DVDSUB","CodecTag":null,"Language":"spa","ColorRange":null,"ColorSpace":null,"ColorTransfer":null,"ColorPrimaries":null,"DvVersionMajor":null,"DvVersionMinor":null,"DvProfile":null,"DvLevel":null,"RpuPresentFlag":null,"ElPresentFlag":null,"BlPresentFlag":null,"DvBlSignalCompatibilityId":null,"Rotation":null,"Comment":null,"TimeBase":"1/1000","CodecTimeBase":null,"Title":null,"VideoRange":0,"VideoRangeType":0,"VideoDoViTitle":null,"AudioSpatialFormat":0,"LocalizedUndefined":"Undefined","LocalizedDefault":"Default","LocalizedForced":"Forced","LocalizedExternal":"External","LocalizedHearingImpaired":"Hearing Impaired","DisplayTitle":"Spanish - DVDSUB","NalLengthSize":null,"IsInterlaced":false,"IsAVC":false,"ChannelLayout":null,"BitRate":null,"BitDepth":null,"RefFrames":null,"PacketLength":null,"Channels":null,"SampleRate":null,"IsDefault":false,"IsForced":false,"IsHearingImpaired":false,"Height":480,"Width":720,"AverageFrameRate":null,"RealFrameRate":null,"ReferenceFrameRate":null,"Profile":null,"Type":2,"AspectRatio":null,"Index":4,"Score":null,"IsExternal":false,"DeliveryMethod":null,"DeliveryUrl":null,"IsExternalUrl":null,"IsTextSubtitleStream":false,"SupportsExternalStream":false,"Path":null,"PixelFormat":null,"Level":0,"IsAnamorphic":null},{"Codec":"DVDSUB","CodecTag":null,"Language":"dan","ColorRange":null,"ColorSpace":null,"ColorTransfer":null,"ColorPrimaries":null,"DvVersionMajor":null,"DvVersionMinor":null,"DvProfile":null,"DvLevel":null,"RpuPresentFlag":null,"ElPresentFlag":null,"BlPresentFlag":null,"DvBlSignalCompatibilityId":null,"Rotation":null,"Comment":null,"TimeBase":"1/1000","CodecTimeBase":null,"Title":null,"VideoRange":0,"VideoRangeType":0,"VideoDoViTitle":null,"AudioSpatialFormat":0,"LocalizedUndefined":"Undefined","LocalizedDefault":"Default","LocalizedForced":"Forced","LocalizedExternal":"External","LocalizedHearingImpaired":"Hearing Impaired","DisplayTitle":"Danish - DVDSUB","NalLengthSize":null,"IsInterlaced":false,"IsAVC":false,"ChannelLayout":null,"BitRate":null,"BitDepth":null,"RefFrames":null,"PacketLength":null,"Channels":null,"SampleRate":null,"IsDefault":false,"IsForced":false,"IsHearingImpaired":false,"Height":480,"Width":720,"AverageFrameRate":null,"RealFrameRate":null,"ReferenceFrameRate":null,"Profile":null,"Type":2,"AspectRatio":null,"Index":5,"Score":null,"IsExternal":false,"DeliveryMethod":null,"DeliveryUrl":null,"IsExternalUrl":null,"IsTextSubtitleStream":false,"SupportsExternalStream":false,"Path":null,"PixelFormat":null,"Level":0,"IsAnamorphic":null},{"Codec":"DVDSUB","CodecTag":null,"Language":"fin","ColorRange":null,"ColorSpace":null,"ColorTransfer":null,"ColorPrimaries":null,"DvVersionMajor":null,"DvVersionMinor":null,"DvProfile":null,"DvLevel":null,"RpuPresentFlag":null,"ElPresentFlag":null,"BlPresentFlag":null,"DvBlSignalCompatibilityId":null,"Rotation":null,"Comment":null,"TimeBase":"1/1000","CodecTimeBase":null,"Title":null,"VideoRange":0,"VideoRangeType":0,"VideoDoViTitle":null,"AudioSpatialFormat":0,"LocalizedUndefined":"Undefined","LocalizedDefault":"Default","LocalizedForced":"Forced","LocalizedExternal":"External","LocalizedHearingImpaired":"Hearing Impaired","DisplayTitle":"Finnish - DVDSUB","NalLengthSize":null,"IsInterlaced":false,"IsAVC":false,"ChannelLayout":null,"BitRate":null,"BitDepth":null,"RefFrames":null,"PacketLength":null,"Channels":null,"SampleRate":null,"IsDefault":false,"IsForced":false,"IsHearingImpaired":false,"Height":480,"Width":720,"AverageFrameRate":null,"RealFrameRate":null,"ReferenceFrameRate":null,"Profile":null,"Type":2,"AspectRatio":null,"Index":6,"Score":null,"IsExternal":false,"DeliveryMethod":null,"DeliveryUrl":null,"IsExternalUrl":null,"IsTextSubtitleStream":false,"SupportsExternalStream":false,"Path":null,"PixelFormat":null,"Level":0,"IsAnamorphic":null},{"Codec":"DVDSUB","CodecTag":null,"Language":"nob","ColorRange":null,"ColorSpace":null,"ColorTransfer":null,"ColorPrimaries":null,"DvVersionMajor":null,"DvVersionMinor":null,"DvProfile":null,"DvLevel":null,"RpuPresentFlag":null,"ElPresentFlag":null,"BlPresentFlag":null,"DvBlSignalCompatibilityId":null,"Rotation":null,"Comment":null,"TimeBase":"1/1000","CodecTimeBase":null,"Title":null,"VideoRange":0,"VideoRangeType":0,"VideoDoViTitle":null,"AudioSpatialFormat":0,"LocalizedUndefined":"Undefined","LocalizedDefault":"Default","LocalizedForced":"Forced","LocalizedExternal":"External","LocalizedHearingImpaired":"Hearing Impaired","DisplayTitle":"Norwegian Bokm\u00E5l - DVDSUB","NalLengthSize":null,"IsInterlaced":false,"IsAVC":false,"ChannelLayout":null,"BitRate":null,"BitDepth":null,"RefFrames":null,"PacketLength":null,"Channels":null,"SampleRate":null,"IsDefault":false,"IsForced":false,"IsHearingImpaired":false,"Height":480,"Width":720,"AverageFrameRate":null,"RealFrameRate":null,"ReferenceFrameRate":null,"Profile":null,"Type":2,"AspectRatio":null,"Index":7,"Score":null,"IsExternal":false,"DeliveryMethod":null,"DeliveryUrl":null,"IsExternalUrl":null,"IsTextSubtitleStream":false,"SupportsExternalStream":false,"Path":null,"PixelFormat":null,"Level":0,"IsAnamorphic":null},{"Codec":"DVDSUB","CodecTag":null,"Language":"swe","ColorRange":null,"ColorSpace":null,"ColorTransfer":null,"ColorPrimaries":null,"DvVersionMajor":null,"DvVersionMinor":null,"DvProfile":null,"DvLevel":null,"RpuPresentFlag":null,"ElPresentFlag":null,"BlPresentFlag":null,"DvBlSignalCompatibilityId":null,"Rotation":null,"Comment":null,"TimeBase":"1/1000","CodecTimeBase":null,"Title":null,"VideoRange":0,"VideoRangeType":0,"VideoDoViTitle":null,"AudioSpatialFormat":0,"LocalizedUndefined":"Undefined","LocalizedDefault":"Default","LocalizedForced":"Forced","LocalizedExternal":"External","LocalizedHearingImpaired":"Hearing Impaired","DisplayTitle":"Swedish - DVDSUB","NalLengthSize":null,"IsInterlaced":false,"IsAVC":false,"ChannelLayout":null,"BitRate":null,"BitDepth":null,"RefFrames":null,"PacketLength":null,"Channels":null,"SampleRate":null,"IsDefault":false,"IsForced":false,"IsHearingImpaired":false,"Height":480,"Width":720,"AverageFrameRate":null,"RealFrameRate":null,"ReferenceFrameRate":null,"Profile":null,"Type":2,"AspectRatio":null,"Index":8,"Score":null,"IsExternal":false,"DeliveryMethod":null,"DeliveryUrl":null,"IsExternalUrl":null,"IsTextSubtitleStream":false,"SupportsExternalStream":false,"Path":null,"PixelFormat":null,"Level":0,"IsAnamorphic":null}],"MediaAttachments":[],"Formats":[],"Bitrate":1242710,"FallbackMaxStreamingBitrate":null,"Timestamp":null,"RequiredHttpHeaders":{},"TranscodingUrl":null,"TranscodingSubProtocol":0,"TranscodingContainer":null,"AnalyzeDurationMs":null,"DefaultAudioStreamIndex":null,"DefaultSubtitleStreamIndex":null,"HasSegments":false}
+
+/usr/lib/jellyfin-ffmpeg/ffmpeg -analyzeduration 200M -probesize 1G -fflags +genpts  -i file:"/media/movies/The Infected/The Infected.mkv" -map_metadata -1 -map_chapters -1 -threads 0 -map 0:0 -map 0:1 -map -0:s -codec:v:0 copy -tag:v:0 hvc1 -bsf:v hevc_mp4toannexb -start_at_zero -codec:a:0 copy -copyts -avoid_negative_ts disabled -max_muxing_queue_size 2048 -f hls -max_delay 5000000 -hls_time 6 -hls_segment_type fmp4 -hls_fmp4_init_filename "2a1a0e66f70221cb361d337f29c571a8-1.mp4" -start_number 0 -hls_segment_filename "/cache/transcodes/2a1a0e66f70221cb361d337f29c571a8%d.mp4" -hls_playlist_type vod -hls_list_size 0 -y "/cache/transcodes/2a1a0e66f70221cb361d337f29c571a8.m3u8"
+
+
+ffmpeg version 7.0.2-Jellyfin Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 12 (Debian 12.2.0-14)
+  configuration: --prefix=/usr/lib/jellyfin-ffmpeg --target-os=linux --extra-version=Jellyfin --disable-doc --disable-ffplay --disable-ptx-compression --disable-static --disable-libxcb --disable-sdl2 --disable-xlib --enable-lto=auto --enable-gpl --enable-version3 --enable-shared --enable-gmp --enable-gnutls --enable-chromaprint --enable-opencl --enable-libdrm --enable-libxml2 --enable-libass --enable-libfreetype --enable-libfribidi --enable-libfontconfig --enable-libharfbuzz --enable-libbluray --enable-libmp3lame --enable-libopus --enable-libtheora --enable-libvorbis --enable-libopenmpt --enable-libdav1d --enable-libsvtav1 --enable-libwebp --enable-libvpx --enable-libx264 --enable-libx265 --enable-libzvbi --enable-libzimg --enable-libfdk-aac --arch=arm64 --cross-prefix=/usr/bin/aarch64-linux-gnu- --toolchain=hardened --enable-cross-compile --enable-rkmpp --enable-rkrga
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+  libpostproc    58.  1.100 / 58.  1.100
+Input #0, matroska,webm, from 'file:/media/movies/The Infected/The Infected.mkv':
+  Metadata:
+    encoder         : libebml v1.3.9 + libmatroska v1.5.2
+    creation_time   : 2020-04-28T21:22:38.000000Z
+  Duration: 00:06:57.36, start: 0.000000, bitrate: 1176 kb/s
+  Stream #0:0: Video: hevc (Main 10), yuv420p10le(tv), 720x480 [SAR 32:27 DAR 16:9], SAR 853:720 DAR 853:480, 29.97 fps, 29.97 tbr, 1k tbn (default)
+      Metadata:
+        BPS-eng         : 1090660
+        DURATION-eng    : 00:06:57.283000000
+        NUMBER_OF_FRAMES-eng: 12506
+        NUMBER_OF_BYTES-eng: 56889272
+        _STATISTICS_WRITING_APP-eng: mkvmerge v38.0.0 ('The Silent Type') 64-bit
+        _STATISTICS_WRITING_DATE_UTC-eng: 2020-04-28 21:22:38
+        _STATISTICS_TAGS-eng: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+  Stream #0:1(eng): Audio: aac (HE-AAC), 48000 Hz, stereo, fltp (default)
+      Metadata:
+        BPS-eng         : 65890
+        DURATION-eng    : 00:06:57.323000000
+        NUMBER_OF_FRAMES-eng: 9781
+        NUMBER_OF_BYTES-eng: 3437223
+        _STATISTICS_WRITING_APP-eng: mkvmerge v38.0.0 ('The Silent Type') 64-bit
+        _STATISTICS_WRITING_DATE_UTC-eng: 2020-04-28 21:22:38
+        _STATISTICS_TAGS-eng: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+  Stream #0:2(eng): Subtitle: dvd_subtitle (dvdsub), 720x480
+      Metadata:
+        BPS-eng         : 4306
+        DURATION-eng    : 00:06:39.728000000
+        NUMBER_OF_FRAMES-eng: 95
+        NUMBER_OF_BYTES-eng: 215167
+        _STATISTICS_WRITING_APP-eng: mkvmerge v38.0.0 ('The Silent Type') 64-bit
+        _STATISTICS_WRITING_DATE_UTC-eng: 2020-04-28 21:22:38
+        _STATISTICS_TAGS-eng: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+  Stream #0:3(ger): Subtitle: dvd_subtitle (dvdsub), 720x480
+      Metadata:
+        BPS-eng         : 3767
+        DURATION-eng    : 00:06:34.959000000
+        NUMBER_OF_FRAMES-eng: 82
+        NUMBER_OF_BYTES-eng: 186000
+        _STATISTICS_WRITING_APP-eng: mkvmerge v38.0.0 ('The Silent Type') 64-bit
+        _STATISTICS_WRITING_DATE_UTC-eng: 2020-04-28 21:22:38
+        _STATISTICS_TAGS-eng: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+  Stream #0:4(spa): Subtitle: dvd_subtitle (dvdsub), 720x480
+      Metadata:
+        BPS-eng         : 3400
+        DURATION-eng    : 00:06:34.959000000
+        NUMBER_OF_FRAMES-eng: 82
+        NUMBER_OF_BYTES-eng: 167859
+        _STATISTICS_WRITING_APP-eng: mkvmerge v38.0.0 ('The Silent Type') 64-bit
+        _STATISTICS_WRITING_DATE_UTC-eng: 2020-04-28 21:22:38
+        _STATISTICS_TAGS-eng: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+  Stream #0:5(dan): Subtitle: dvd_subtitle (dvdsub), 720x480
+      Metadata:
+        BPS-eng         : 3507
+        DURATION-eng    : 00:06:34.959000000
+        NUMBER_OF_FRAMES-eng: 82
+        NUMBER_OF_BYTES-eng: 173181
+        _STATISTICS_WRITING_APP-eng: mkvmerge v38.0.0 ('The Silent Type') 64-bit
+        _STATISTICS_WRITING_DATE_UTC-eng: 2020-04-28 21:22:38
+        _STATISTICS_TAGS-eng: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+  Stream #0:6(fin): Subtitle: dvd_subtitle (dvdsub), 720x480
+      Metadata:
+        BPS-eng         : 3345
+        DURATION-eng    : 00:06:34.959000000
+        NUMBER_OF_FRAMES-eng: 82
+        NUMBER_OF_BYTES-eng: 165189
+        _STATISTICS_WRITING_APP-eng: mkvmerge v38.0.0 ('The Silent Type') 64-bit
+        _STATISTICS_WRITING_DATE_UTC-eng: 2020-04-28 21:22:38
+        _STATISTICS_TAGS-eng: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+  Stream #0:7(nob): Subtitle: dvd_subtitle (dvdsub), 720x480
+      Metadata:
+        BPS-eng         : 3406
+        DURATION-eng    : 00:06:34.959000000
+        NUMBER_OF_FRAMES-eng: 82
+        NUMBER_OF_BYTES-eng: 168199
+        _STATISTICS_WRITING_APP-eng: mkvmerge v38.0.0 ('The Silent Type') 64-bit
+        _STATISTICS_WRITING_DATE_UTC-eng: 2020-04-28 21:22:38
+        _STATISTICS_TAGS-eng: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+  Stream #0:8(swe): Subtitle: dvd_subtitle (dvdsub), 720x480
+      Metadata:
+        BPS-eng         : 2614
+        DURATION-eng    : 00:06:34.959000000
+        NUMBER_OF_FRAMES-eng: 75
+        NUMBER_OF_BYTES-eng: 129101
+        _STATISTICS_WRITING_APP-eng: mkvmerge v38.0.0 ('The Silent Type') 64-bit
+        _STATISTICS_WRITING_DATE_UTC-eng: 2020-04-28 21:22:38
+        _STATISTICS_TAGS-eng: BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES
+[out#0/hls @ 0x55563d5ebf50] Codec AVOption threads (set the number of threads) has not been used for any stream. The most likely reason is either wrong type (e.g. a video option with no video streams) or that it is a private option of some encoder which was not actually used for any stream.
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+  Stream #0:1 -> #0:1 (copy)
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a8-1.mp4' for writing
+Output #0, hls, to '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a8.m3u8':
+  Metadata:
+    encoder         : Lavf61.1.100
+  Stream #0:0: Video: hevc (Main 10) (hvc1 / 0x31637668), yuv420p10le(tv), 720x480 [SAR 853:720 DAR 853:480], q=2-31, 29.97 fps, 29.97 tbr, 16k tbn (default)
+  Stream #0:1: Audio: aac (HE-AAC), 48000 Hz, stereo, fltp (default)
+Press [q] to stop, [?] for help
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a80.mp4' for writing
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a81.mp4' for writing
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a82.mp4' for writing
+[mp4 @ 0x55563d634520] Packet duration: -16 / dts: 870248 is out of range
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a83.mp4' for writing
+[mp4 @ 0x55563d634520] Packet duration: -16 / dts: 1214312 is out of range
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a84.mp4' for writing
+[mp4 @ 0x55563d634520] Packet duration: -16 / dts: 1499000 is out of range
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a85.mp4' for writing
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a86.mp4' for writing
+[mp4 @ 0x55563d634520] Packet duration: -16 / dts: 2047832 is out of range
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a87.mp4' for writing
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a88.mp4' for writing
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a89.mp4' for writing
+[mp4 @ 0x55563d634520] Packet duration: -16 / dts: 3106664 is out of range
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a810.mp4' for writing
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a811.mp4' for writing
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a812.mp4' for writing
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a813.mp4' for writing
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a814.mp4' for writing
+[mp4 @ 0x55563d634520] Packet duration: -16 / dts: 4380536 is out of range
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a815.mp4' for writing
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a816.mp4' for writing
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a817.mp4' for writing
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a818.mp4' for writing
+[mp4 @ 0x55563d634520] Packet duration: -16 / dts: 5578600 is out of range
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a819.mp4' for writing
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a820.mp4' for writing
+[mp4 @ 0x55563d634520] Packet duration: -16 / dts: 6078296 is out of range
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a821.mp4' for writing
+[mp4 @ 0x55563d634520] Packet duration: -16 / dts: 6420344 is out of range
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a822.mp4' for writing
+[mp4 @ 0x55563d634520] Packet duration: -16 / dts: 6846296 is out of range
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a823.mp4' for writing
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a824.mp4' for writing
+[mp4 @ 0x55563d634520] Packet duration: -16 / dts: 7255928 is out of range
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a825.mp4' for writing
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a826.mp4' for writing
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a827.mp4' for writing
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a828.mp4' for writing
+[mp4 @ 0x55563d634520] Packet duration: -16 / dts: 8507240 is out of range
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a829.mp4' for writing
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a830.mp4' for writing
+[mp4 @ 0x55563d634520] Packet duration: -16 / dts: 8970104 is out of range
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a831.mp4' for writing
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a832.mp4' for writing
+[mp4 @ 0x55563d634520] Packet duration: -16 / dts: 9697144 is out of range
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a833.mp4' for writing
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a834.mp4' for writing
+[mp4 @ 0x55563d634520] Packet duration: -16 / dts: 10381160 is out of range
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a835.mp4' for writing
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a836.mp4' for writing
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a837.mp4' for writing
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a838.mp4' for writing
+[mp4 @ 0x55563d634520] Packet duration: -16 / dts: 11409272 is out of range
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a839.mp4' for writing
+[mp4 @ 0x55563d634520] Packet duration: -16 / dts: 11544424 is out of range
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a840.mp4' for writing
+[mp4 @ 0x55563d634520] Packet duration: -16 / dts: 11810648 is out of range
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a841.mp4' for writing
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a842.mp4' for writing
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a843.mp4' for writing
+[mp4 @ 0x55563d634520] Packet duration: -16 / dts: 12787576 is out of range
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a844.mp4' for writing
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a845.mp4' for writing
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a846.mp4' for writing
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a847.mp4' for writing
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a848.mp4' for writing
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a849.mp4' for writing
+[mp4 @ 0x55563d634520] Packet duration: -16 / dts: 14696312 is out of range
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a850.mp4' for writing
+[mp4 @ 0x55563d634520] Packet duration: -16 / dts: 14778200 is out of range
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a851.mp4' for writing
+[mp4 @ 0x55563d634520] Packet duration: -16 / dts: 15134584 is out of range
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a852.mp4' for writing
+[mp4 @ 0x55563d634520] Packet duration: -16 / dts: 15277928 is out of range
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a853.mp4' for writing
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a854.mp4' for writing
+[mp4 @ 0x55563d634520] Packet duration: -16 / dts: 15859544 is out of range
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a855.mp4' for writing
+[mp4 @ 0x55563d634520] Packet duration: -16 / dts: 16168808 is out of range
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a856.mp4' for writing
+[mp4 @ 0x55563d634520] Packet duration: -16 / dts: 16525160 is out of range
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a857.mp4' for writing
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a858.mp4' for writing
+[mp4 @ 0x55563d634520] Packet duration: -16 / dts: 16996216 is out of range
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a859.mp4' for writing
+[mp4 @ 0x55563d634520] Packet duration: -16 / dts: 17325944 is out of range
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a860.mp4' for writing
+[mp4 @ 0x55563d634520] Packet duration: -16 / dts: 17569640 is out of range
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a861.mp4' for writing
+[mp4 @ 0x55563d634520] Packet duration: -16 / dts: 17907560 is out of range
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a862.mp4' for writing
+[mp4 @ 0x55563d634520] Packet duration: -16 / dts: 18227048 is out of range
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a863.mp4' for writing
+[mp4 @ 0x55563d634520] Packet duration: -16 / dts: 18485096 is out of range
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a864.mp4' for writing
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a865.mp4' for writing
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a866.mp4' for writing
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a867.mp4' for writing
+[mp4 @ 0x55563d634520] Packet duration: -16 / dts: 19601272 is out of range
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a868.mp4' for writing
+[hls @ 0x55563d5fc8d0] Opening '/cache/transcodes/2a1a0e66f70221cb361d337f29c571a869.mp4' for writing
+[out#0/hls @ 0x55563d5ebf50] video:55873KiB audio:3357KiB subtitle:0KiB other streams:0KiB global headers:2KiB muxing overhead: unknown
+size=N/A time=00:00:00.00 bitrate=N/A speed=   0x    

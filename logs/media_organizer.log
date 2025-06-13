@@ -1,0 +1,320 @@
+[Fri 13 Jun 03:02:26 BST 2025] Called by Transmission for: storage/downloads/complete/Inception (2010) [1080p]/
+[Fri 13 Jun 03:02:26 BST 2025] Organizing files in: storage/downloads/complete/Inception (2010) [1080p]
+[Fri 13 Jun 03:02:26 BST 2025] Found 1 video files
+[Fri 13 Jun 03:02:26 BST 2025] Processing: Inception.2010.1080p.BrRip.x264.YIFY.mp4
+[Fri 13 Jun 03:02:26 BST 2025] Parsed as: {'original_name': 'Inception.2010.1080p.BrRip.x264.YIFY', 'title': 'Inception', 'year': 2010, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 03:02:26 BST 2025] ✓ Hard linked: Inception.2010.1080p.BrRip.x264.YIFY.mp4 -> /home/matthewhans/mediaserver-enhanced/storage/media/movies/Inception (2010)/Inception.2010.1080p.BrRip.x264.YIFY.mp4
+[Fri 13 Jun 03:02:26 BST 2025] Successfully organized 1/1 files
+[Fri 13 Jun 03:02:26 BST 2025] Jellyfin is running - triggering library scan
+[Fri 13 Jun 03:22:36 BST 2025] Called by Transmission for: /mnt/storage/downloads/complete/Inception (2010) [1080p]/
+[Fri 13 Jun 03:22:36 BST 2025] Organizing files in: /mnt/storage/downloads/complete/Inception (2010) [1080p]
+[Fri 13 Jun 03:22:36 BST 2025] Found 1 video files
+[Fri 13 Jun 03:22:36 BST 2025] Processing: Inception.2010.1080p.BrRip.x264.YIFY.mp4
+[Fri 13 Jun 03:22:36 BST 2025] Parsed as: {'original_name': 'Inception.2010.1080p.BrRip.x264.YIFY', 'title': 'Inception', 'year': 2010, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 03:22:36 BST 2025] ✓ Hard linked: Inception.2010.1080p.BrRip.x264.YIFY.mp4 -> /mnt/storage/media/movies/Inception (2010)/Inception.2010.1080p.BrRip.x264.YIFY.mp4
+[Fri 13 Jun 03:22:36 BST 2025] Successfully organized 1/1 files
+[Fri 13 Jun 03:22:36 BST 2025] Jellyfin is running - triggering library scan
+[Fri 13 Jun 04:12:23 BST 2025] Called by Transmission for: /mnt/storage/downloads/complete/rick.and.morty.s08e01.1080p.web.h264-lazycunts[EZTVx.to].mkv
+[Fri 13 Jun 04:12:23 BST 2025] Organizing files in: /mnt/storage/downloads/complete/rick.and.morty.s08e01.1080p.web.h264-lazycunts[EZTVx.to].mkv
+[Fri 13 Jun 04:12:23 BST 2025] No video files found
+[Fri 13 Jun 04:12:23 BST 2025] Jellyfin is running - triggering library scan
+[Fri 13 Jun 04:12:31 BST 2025] Called by Transmission for: /mnt/storage/downloads/complete/
+[Fri 13 Jun 04:12:31 BST 2025] Organizing files in: /mnt/storage/downloads/complete
+[Fri 13 Jun 04:12:31 BST 2025] Found 3 video files
+[Fri 13 Jun 04:12:31 BST 2025] Processing: rick.and.morty.s08e01.1080p.web.h264-lazycunts[EZTVx.to].mkv
+[Fri 13 Jun 04:12:31 BST 2025] Parsed as: {'original_name': 'rick.and.morty.s08e01.1080p.web.h264-lazycunts[EZTVx.to]', 'title': 'rick and morty', 'year': None, 'season': 8, 'episode': 1, 'resolution': '1080p', 'is_tv': True}
+[Fri 13 Jun 04:12:31 BST 2025] ✓ Hard linked: rick.and.morty.s08e01.1080p.web.h264-lazycunts[EZTVx.to].mkv -> /mnt/storage/media/tv/rick and morty/Season 08/rick and morty - S08E01.mkv
+[Fri 13 Jun 04:12:31 BST 2025] Processing: Inception.2010.1080p.BrRip.x264.YIFY.mp4
+[Fri 13 Jun 04:12:31 BST 2025] Parsed as: {'original_name': 'Inception.2010.1080p.BrRip.x264.YIFY', 'title': 'Inception', 'year': 2010, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 04:12:31 BST 2025] ✓ Hard linked: Inception.2010.1080p.BrRip.x264.YIFY.mp4 -> /mnt/storage/media/movies/Inception (2010)/Inception.2010.1080p.BrRip.x264.YIFY.mp4
+[Fri 13 Jun 04:12:31 BST 2025] Processing: Demolition.Man.BluRay.1080p.x264.5.1.Judas.mp4
+[Fri 13 Jun 04:12:31 BST 2025] Parsed as: {'original_name': 'Demolition.Man.BluRay.1080p.x264.5.1.Judas', 'title': 'Demolition Man BluRay 1080p x264 5 1 Judas', 'year': None, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 04:12:31 BST 2025] ✓ Hard linked: Demolition.Man.BluRay.1080p.x264.5.1.Judas.mp4 -> /mnt/storage/media/movies/Demolition Man BluRay 1080p x264 5 1 Judas/Demolition.Man.BluRay.1080p.x264.5.1.Judas.mp4
+[Fri 13 Jun 04:12:31 BST 2025] Successfully organized 3/3 files
+[Fri 13 Jun 04:12:31 BST 2025] Jellyfin is running - triggering library scan
+[Fri 13 Jun 04:30:08 BST 2025] Manual organization run
+[Fri 13 Jun 04:30:08 BST 2025] Organizing files in: /mnt/storage/downloads/complete
+[Fri 13 Jun 04:30:08 BST 2025] Found 4 video files
+[Fri 13 Jun 04:30:08 BST 2025] Processing: 28 giorni dopo - 28 Days Later (2002) 1080p h264 Ac3 5.1 Ita Eng Sub Ita Eng-MIRCrew.mkv
+[Fri 13 Jun 04:30:08 BST 2025] Parsed as: {'original_name': '28 giorni dopo - 28 Days Later (2002) 1080p h264 Ac3 5.1 Ita Eng Sub Ita Eng-MIRCrew', 'title': '28 giorni dopo 28 Days Later', 'year': 2002, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 04:30:08 BST 2025] ✓ Hard linked: 28 giorni dopo - 28 Days Later (2002) 1080p h264 Ac3 5.1 Ita Eng Sub Ita Eng-MIRCrew.mkv -> /mnt/storage/media/movies/28 giorni dopo 28 Days Later (2002)/28 giorni dopo - 28 Days Later (2002) 1080p h264 Ac3 5.1 Ita Eng Sub Ita Eng-MIRCrew.mkv
+[Fri 13 Jun 04:30:08 BST 2025] Processing: rick.and.morty.s08e01.1080p.web.h264-lazycunts[EZTVx.to].mkv
+[Fri 13 Jun 04:30:08 BST 2025] Parsed as: {'original_name': 'rick.and.morty.s08e01.1080p.web.h264-lazycunts[EZTVx.to]', 'title': 'rick and morty', 'year': None, 'season': 8, 'episode': 1, 'resolution': '1080p', 'is_tv': True}
+[Fri 13 Jun 04:30:08 BST 2025] ✓ Hard linked: rick.and.morty.s08e01.1080p.web.h264-lazycunts[EZTVx.to].mkv -> /mnt/storage/media/tv/rick and morty/Season 08/rick and morty - S08E01.mkv
+[Fri 13 Jun 04:30:08 BST 2025] Processing: Inception.2010.1080p.BrRip.x264.YIFY.mp4
+[Fri 13 Jun 04:30:08 BST 2025] Parsed as: {'original_name': 'Inception.2010.1080p.BrRip.x264.YIFY', 'title': 'Inception', 'year': 2010, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 04:30:08 BST 2025] ✓ Hard linked: Inception.2010.1080p.BrRip.x264.YIFY.mp4 -> /mnt/storage/media/movies/Inception (2010)/Inception.2010.1080p.BrRip.x264.YIFY.mp4
+[Fri 13 Jun 04:30:08 BST 2025] Processing: Demolition.Man.BluRay.1080p.x264.5.1.Judas.mp4
+[Fri 13 Jun 04:30:08 BST 2025] Parsed as: {'original_name': 'Demolition.Man.BluRay.1080p.x264.5.1.Judas', 'title': 'Demolition Man BluRay 1080p x264 5 1 Judas', 'year': None, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 04:30:08 BST 2025] ✓ Hard linked: Demolition.Man.BluRay.1080p.x264.5.1.Judas.mp4 -> /mnt/storage/media/movies/Demolition Man BluRay 1080p x264 5 1 Judas/Demolition.Man.BluRay.1080p.x264.5.1.Judas.mp4
+[Fri 13 Jun 04:30:08 BST 2025] Successfully organized 4/4 files
+[Fri 13 Jun 04:30:08 BST 2025] Jellyfin is running - triggering library scan
+[Fri 13 Jun 04:57:57 BST 2025] Manual organization run
+[Fri 13 Jun 04:57:57 BST 2025] Organizing files in: /mnt/storage/downloads/complete
+[Fri 13 Jun 04:57:57 BST 2025] Found 11 video files
+[Fri 13 Jun 04:57:57 BST 2025] Processing: 28 giorni dopo - 28 Days Later (2002) 1080p h264 Ac3 5.1 Ita Eng Sub Ita Eng-MIRCrew.mkv
+[Fri 13 Jun 04:57:57 BST 2025] Parsed as: {'original_name': '28 giorni dopo - 28 Days Later (2002) 1080p h264 Ac3 5.1 Ita Eng Sub Ita Eng-MIRCrew', 'title': '28 giorni dopo 28 Days Later', 'year': 2002, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 04:57:57 BST 2025] ✓ Hard linked: 28 giorni dopo - 28 Days Later (2002) 1080p h264 Ac3 5.1 Ita Eng Sub Ita Eng-MIRCrew.mkv -> /mnt/storage/media/movies/28 giorni dopo 28 Days Later (2002)/28 giorni dopo - 28 Days Later (2002) 1080p h264 Ac3 5.1 Ita Eng Sub Ita Eng-MIRCrew.mkv
+[Fri 13 Jun 04:57:57 BST 2025] Processing: rick.and.morty.s08e01.1080p.web.h264-lazycunts[EZTVx.to].mkv
+[Fri 13 Jun 04:57:57 BST 2025] Parsed as: {'original_name': 'rick.and.morty.s08e01.1080p.web.h264-lazycunts[EZTVx.to]', 'title': 'rick and morty', 'year': None, 'season': 8, 'episode': 1, 'resolution': '1080p', 'is_tv': True}
+[Fri 13 Jun 04:57:57 BST 2025] ✓ Hard linked: rick.and.morty.s08e01.1080p.web.h264-lazycunts[EZTVx.to].mkv -> /mnt/storage/media/tv/rick and morty/Season 08/rick and morty - S08E01.mkv
+[Fri 13 Jun 04:57:57 BST 2025] Processing: Inception.2010.1080p.BrRip.x264.YIFY.mp4
+[Fri 13 Jun 04:57:57 BST 2025] Parsed as: {'original_name': 'Inception.2010.1080p.BrRip.x264.YIFY', 'title': 'Inception', 'year': 2010, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 04:57:57 BST 2025] ✓ Hard linked: Inception.2010.1080p.BrRip.x264.YIFY.mp4 -> /mnt/storage/media/movies/Inception (2010)/Inception.2010.1080p.BrRip.x264.YIFY.mp4
+[Fri 13 Jun 04:57:57 BST 2025] Processing: Demolition.Man.BluRay.1080p.x264.5.1.Judas.mp4
+[Fri 13 Jun 04:57:57 BST 2025] Parsed as: {'original_name': 'Demolition.Man.BluRay.1080p.x264.5.1.Judas', 'title': 'Demolition Man BluRay 1080p x264 5 1 Judas', 'year': None, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 04:57:57 BST 2025] ✓ Hard linked: Demolition.Man.BluRay.1080p.x264.5.1.Judas.mp4 -> /mnt/storage/media/movies/Demolition Man BluRay 1080p x264 5 1 Judas/Demolition.Man.BluRay.1080p.x264.5.1.Judas.mp4
+[Fri 13 Jun 04:57:57 BST 2025] Processing: 28 Weeks Later (2007) (1080p BluRay x265 10bit Tigole).mkv
+[Fri 13 Jun 04:57:57 BST 2025] Parsed as: {'original_name': '28 Weeks Later (2007) (1080p BluRay x265 10bit Tigole)', 'title': '28 Weeks Later', 'year': 2007, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 04:57:57 BST 2025] ✓ Hard linked: 28 Weeks Later (2007) (1080p BluRay x265 10bit Tigole).mkv -> /mnt/storage/media/movies/28 Weeks Later (2007)/28 Weeks Later (2007) (1080p BluRay x265 10bit Tigole).mkv
+[Fri 13 Jun 04:57:57 BST 2025] Processing: Getting into the Action.mkv
+[Fri 13 Jun 04:57:57 BST 2025] Parsed as: {'original_name': 'Getting into the Action', 'title': 'Getting into the Action', 'year': None, 'season': None, 'episode': None, 'resolution': '', 'is_tv': False}
+[Fri 13 Jun 04:57:57 BST 2025] ✓ Hard linked: Getting into the Action.mkv -> /mnt/storage/media/movies/Getting into the Action/Getting into the Action.mkv
+[Fri 13 Jun 04:57:57 BST 2025] Processing: Trailer.mkv
+[Fri 13 Jun 04:57:57 BST 2025] Parsed as: {'original_name': 'Trailer', 'title': 'Trailer', 'year': None, 'season': None, 'episode': None, 'resolution': '', 'is_tv': False}
+[Fri 13 Jun 04:57:57 BST 2025] ✓ Hard linked: Trailer.mkv -> /mnt/storage/media/movies/Trailer/Trailer.mkv
+[Fri 13 Jun 04:57:57 BST 2025] Processing: Deleted Scenes.mkv
+[Fri 13 Jun 04:57:57 BST 2025] Parsed as: {'original_name': 'Deleted Scenes', 'title': 'Deleted Scenes', 'year': None, 'season': None, 'episode': None, 'resolution': '', 'is_tv': False}
+[Fri 13 Jun 04:57:57 BST 2025] ✓ Hard linked: Deleted Scenes.mkv -> /mnt/storage/media/movies/Deleted Scenes/Deleted Scenes.mkv
+[Fri 13 Jun 04:57:57 BST 2025] Processing: The Infected.mkv
+[Fri 13 Jun 04:57:57 BST 2025] Parsed as: {'original_name': 'The Infected', 'title': 'The Infected', 'year': None, 'season': None, 'episode': None, 'resolution': '', 'is_tv': False}
+[Fri 13 Jun 04:57:57 BST 2025] ✓ Hard linked: The Infected.mkv -> /mnt/storage/media/movies/The Infected/The Infected.mkv
+[Fri 13 Jun 04:57:57 BST 2025] Processing: Code Red - The Making of 28 Weeks Later.mkv
+[Fri 13 Jun 04:57:57 BST 2025] Parsed as: {'original_name': 'Code Red - The Making of 28 Weeks Later', 'title': 'Code Red The Making of 28 Weeks Later', 'year': None, 'season': None, 'episode': None, 'resolution': '', 'is_tv': False}
+[Fri 13 Jun 04:57:57 BST 2025] ✓ Hard linked: Code Red - The Making of 28 Weeks Later.mkv -> /mnt/storage/media/movies/Code Red The Making of 28 Weeks Later/Code Red - The Making of 28 Weeks Later.mkv
+[Fri 13 Jun 04:57:57 BST 2025] Processing: The Aftermath.mkv
+[Fri 13 Jun 04:57:57 BST 2025] Parsed as: {'original_name': 'The Aftermath', 'title': 'The Aftermath', 'year': None, 'season': None, 'episode': None, 'resolution': '', 'is_tv': False}
+[Fri 13 Jun 04:57:57 BST 2025] ✓ Hard linked: The Aftermath.mkv -> /mnt/storage/media/movies/The Aftermath/The Aftermath.mkv
+[Fri 13 Jun 04:57:57 BST 2025] Successfully organized 11/11 files
+[Fri 13 Jun 04:57:57 BST 2025] Jellyfin is running - triggering library scan
+[Fri 13 Jun 05:11:07 BST 2025] Manual organization run
+[Fri 13 Jun 05:11:07 BST 2025] Organizing files in: /mnt/storage/downloads/complete
+[Fri 13 Jun 05:11:07 BST 2025] Found 12 video files
+[Fri 13 Jun 05:11:07 BST 2025] Processing: 28 giorni dopo - 28 Days Later (2002) 1080p h264 Ac3 5.1 Ita Eng Sub Ita Eng-MIRCrew.mkv
+[Fri 13 Jun 05:11:07 BST 2025] Parsed as: {'original_name': '28 giorni dopo - 28 Days Later (2002) 1080p h264 Ac3 5.1 Ita Eng Sub Ita Eng-MIRCrew', 'title': '28 giorni dopo 28 Days Later', 'year': 2002, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 05:11:07 BST 2025] ✓ Hard linked: 28 giorni dopo - 28 Days Later (2002) 1080p h264 Ac3 5.1 Ita Eng Sub Ita Eng-MIRCrew.mkv -> /mnt/storage/media/movies/28 giorni dopo 28 Days Later (2002)/28 giorni dopo - 28 Days Later (2002) 1080p h264 Ac3 5.1 Ita Eng Sub Ita Eng-MIRCrew.mkv
+[Fri 13 Jun 05:11:07 BST 2025] Processing: rick.and.morty.s08e01.1080p.web.h264-lazycunts[EZTVx.to].mkv
+[Fri 13 Jun 05:11:07 BST 2025] Parsed as: {'original_name': 'rick.and.morty.s08e01.1080p.web.h264-lazycunts[EZTVx.to]', 'title': 'rick and morty', 'year': None, 'season': 8, 'episode': 1, 'resolution': '1080p', 'is_tv': True}
+[Fri 13 Jun 05:11:07 BST 2025] ✓ Hard linked: rick.and.morty.s08e01.1080p.web.h264-lazycunts[EZTVx.to].mkv -> /mnt/storage/media/tv/rick and morty/Season 08/rick and morty - S08E01.mkv
+[Fri 13 Jun 05:11:07 BST 2025] Processing: rick.and.morty.s08e02.1080p.web.h264-successfulcrab[EZTVx.to].mkv
+[Fri 13 Jun 05:11:07 BST 2025] Parsed as: {'original_name': 'rick.and.morty.s08e02.1080p.web.h264-successfulcrab[EZTVx.to]', 'title': 'rick and morty', 'year': None, 'season': 8, 'episode': 2, 'resolution': '1080p', 'is_tv': True}
+[Fri 13 Jun 05:11:07 BST 2025] ✓ Hard linked: rick.and.morty.s08e02.1080p.web.h264-successfulcrab[EZTVx.to].mkv -> /mnt/storage/media/tv/rick and morty/Season 08/rick and morty - S08E02.mkv
+[Fri 13 Jun 05:11:07 BST 2025] Processing: Inception.2010.1080p.BrRip.x264.YIFY.mp4
+[Fri 13 Jun 05:11:07 BST 2025] Parsed as: {'original_name': 'Inception.2010.1080p.BrRip.x264.YIFY', 'title': 'Inception', 'year': 2010, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 05:11:07 BST 2025] ✓ Hard linked: Inception.2010.1080p.BrRip.x264.YIFY.mp4 -> /mnt/storage/media/movies/Inception (2010)/Inception.2010.1080p.BrRip.x264.YIFY.mp4
+[Fri 13 Jun 05:11:07 BST 2025] Processing: Demolition.Man.BluRay.1080p.x264.5.1.Judas.mp4
+[Fri 13 Jun 05:11:07 BST 2025] Parsed as: {'original_name': 'Demolition.Man.BluRay.1080p.x264.5.1.Judas', 'title': 'Demolition Man BluRay 1080p x264 5 1 Judas', 'year': None, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 05:11:07 BST 2025] ✓ Hard linked: Demolition.Man.BluRay.1080p.x264.5.1.Judas.mp4 -> /mnt/storage/media/movies/Demolition Man BluRay 1080p x264 5 1 Judas/Demolition.Man.BluRay.1080p.x264.5.1.Judas.mp4
+[Fri 13 Jun 05:11:07 BST 2025] Processing: 28 Weeks Later (2007) (1080p BluRay x265 10bit Tigole).mkv
+[Fri 13 Jun 05:11:07 BST 2025] Parsed as: {'original_name': '28 Weeks Later (2007) (1080p BluRay x265 10bit Tigole)', 'title': '28 Weeks Later', 'year': 2007, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 05:11:07 BST 2025] ✓ Hard linked: 28 Weeks Later (2007) (1080p BluRay x265 10bit Tigole).mkv -> /mnt/storage/media/movies/28 Weeks Later (2007)/28 Weeks Later (2007) (1080p BluRay x265 10bit Tigole).mkv
+[Fri 13 Jun 05:11:07 BST 2025] Processing: Getting into the Action.mkv
+[Fri 13 Jun 05:11:07 BST 2025] Parsed as: {'original_name': 'Getting into the Action', 'title': 'Getting into the Action', 'year': None, 'season': None, 'episode': None, 'resolution': '', 'is_tv': False}
+[Fri 13 Jun 05:11:07 BST 2025] ✓ Hard linked: Getting into the Action.mkv -> /mnt/storage/media/movies/Getting into the Action/Getting into the Action.mkv
+[Fri 13 Jun 05:11:07 BST 2025] Processing: Trailer.mkv
+[Fri 13 Jun 05:11:07 BST 2025] Parsed as: {'original_name': 'Trailer', 'title': 'Trailer', 'year': None, 'season': None, 'episode': None, 'resolution': '', 'is_tv': False}
+[Fri 13 Jun 05:11:07 BST 2025] ✓ Hard linked: Trailer.mkv -> /mnt/storage/media/movies/Trailer/Trailer.mkv
+[Fri 13 Jun 05:11:07 BST 2025] Processing: Deleted Scenes.mkv
+[Fri 13 Jun 05:11:07 BST 2025] Parsed as: {'original_name': 'Deleted Scenes', 'title': 'Deleted Scenes', 'year': None, 'season': None, 'episode': None, 'resolution': '', 'is_tv': False}
+[Fri 13 Jun 05:11:07 BST 2025] ✓ Hard linked: Deleted Scenes.mkv -> /mnt/storage/media/movies/Deleted Scenes/Deleted Scenes.mkv
+[Fri 13 Jun 05:11:07 BST 2025] Processing: The Infected.mkv
+[Fri 13 Jun 05:11:07 BST 2025] Parsed as: {'original_name': 'The Infected', 'title': 'The Infected', 'year': None, 'season': None, 'episode': None, 'resolution': '', 'is_tv': False}
+[Fri 13 Jun 05:11:07 BST 2025] ✓ Hard linked: The Infected.mkv -> /mnt/storage/media/movies/The Infected/The Infected.mkv
+[Fri 13 Jun 05:11:08 BST 2025] Processing: Code Red - The Making of 28 Weeks Later.mkv
+[Fri 13 Jun 05:11:08 BST 2025] Parsed as: {'original_name': 'Code Red - The Making of 28 Weeks Later', 'title': 'Code Red The Making of 28 Weeks Later', 'year': None, 'season': None, 'episode': None, 'resolution': '', 'is_tv': False}
+[Fri 13 Jun 05:11:08 BST 2025] ✓ Hard linked: Code Red - The Making of 28 Weeks Later.mkv -> /mnt/storage/media/movies/Code Red The Making of 28 Weeks Later/Code Red - The Making of 28 Weeks Later.mkv
+[Fri 13 Jun 05:11:08 BST 2025] Processing: The Aftermath.mkv
+[Fri 13 Jun 05:11:08 BST 2025] Parsed as: {'original_name': 'The Aftermath', 'title': 'The Aftermath', 'year': None, 'season': None, 'episode': None, 'resolution': '', 'is_tv': False}
+[Fri 13 Jun 05:11:08 BST 2025] ✓ Hard linked: The Aftermath.mkv -> /mnt/storage/media/movies/The Aftermath/The Aftermath.mkv
+[Fri 13 Jun 05:11:08 BST 2025] Successfully organized 12/12 files
+[Fri 13 Jun 05:11:08 BST 2025] Jellyfin is running - triggering library scan
+[Fri 13 Jun 05:25:00 BST 2025] Manual organization run
+[Fri 13 Jun 05:25:00 BST 2025] Organizing files in: /mnt/storage/downloads/complete
+[Fri 13 Jun 05:25:00 BST 2025] Found 9 video files
+[Fri 13 Jun 05:25:00 BST 2025] Processing: 28 giorni dopo - 28 Days Later (2002) 1080p h264 Ac3 5.1 Ita Eng Sub Ita Eng-MIRCrew.mkv
+[Fri 13 Jun 05:25:00 BST 2025] Parsed as: {'original_name': '28 giorni dopo - 28 Days Later (2002) 1080p h264 Ac3 5.1 Ita Eng Sub Ita Eng-MIRCrew', 'title': '28 giorni dopo 28 Days Later', 'year': 2002, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 05:25:00 BST 2025] ✓ Hard linked: 28 giorni dopo - 28 Days Later (2002) 1080p h264 Ac3 5.1 Ita Eng Sub Ita Eng-MIRCrew.mkv -> /mnt/storage/media/movies/28 giorni dopo 28 Days Later (2002)/28 giorni dopo - 28 Days Later (2002) 1080p h264 Ac3 5.1 Ita Eng Sub Ita Eng-MIRCrew.mkv
+[Fri 13 Jun 05:25:00 BST 2025] Processing: rick.and.morty.s08e01.1080p.web.h264-lazycunts[EZTVx.to].mkv
+[Fri 13 Jun 05:25:00 BST 2025] Parsed as: {'original_name': 'rick.and.morty.s08e01.1080p.web.h264-lazycunts[EZTVx.to]', 'title': 'rick and morty', 'year': None, 'season': 8, 'episode': 1, 'resolution': '1080p', 'is_tv': True}
+[Fri 13 Jun 05:25:00 BST 2025] ✓ Hard linked: rick.and.morty.s08e01.1080p.web.h264-lazycunts[EZTVx.to].mkv -> /mnt/storage/media/tv/rick and morty/Season 08/rick and morty - S08E01.mkv
+[Fri 13 Jun 05:25:00 BST 2025] Processing: rick.and.morty.s08e03.1080p.web.h264-successfulcrab[EZTVx.to].mkv
+[Fri 13 Jun 05:25:00 BST 2025] Parsed as: {'original_name': 'rick.and.morty.s08e03.1080p.web.h264-successfulcrab[EZTVx.to]', 'title': 'rick and morty', 'year': None, 'season': 8, 'episode': 3, 'resolution': '1080p', 'is_tv': True}
+[Fri 13 Jun 05:25:00 BST 2025] ✓ Hard linked: rick.and.morty.s08e03.1080p.web.h264-successfulcrab[EZTVx.to].mkv -> /mnt/storage/media/tv/rick and morty/Season 08/rick and morty - S08E03.mkv
+[Fri 13 Jun 05:25:00 BST 2025] Processing: rick.and.morty.s08e02.1080p.web.h264-successfulcrab[EZTVx.to].mkv
+[Fri 13 Jun 05:25:00 BST 2025] Parsed as: {'original_name': 'rick.and.morty.s08e02.1080p.web.h264-successfulcrab[EZTVx.to]', 'title': 'rick and morty', 'year': None, 'season': 8, 'episode': 2, 'resolution': '1080p', 'is_tv': True}
+[Fri 13 Jun 05:25:00 BST 2025] ✓ Hard linked: rick.and.morty.s08e02.1080p.web.h264-successfulcrab[EZTVx.to].mkv -> /mnt/storage/media/tv/rick and morty/Season 08/rick and morty - S08E02.mkv
+[Fri 13 Jun 05:25:00 BST 2025] Processing: Inception.2010.1080p.BrRip.x264.YIFY.mp4
+[Fri 13 Jun 05:25:00 BST 2025] Parsed as: {'original_name': 'Inception.2010.1080p.BrRip.x264.YIFY', 'title': 'Inception', 'year': 2010, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 05:25:00 BST 2025] ✓ Hard linked: Inception.2010.1080p.BrRip.x264.YIFY.mp4 -> /mnt/storage/media/movies/Inception (2010)/Inception.2010.1080p.BrRip.x264.YIFY.mp4
+[Fri 13 Jun 05:25:00 BST 2025] Processing: Demolition.Man.BluRay.1080p.x264.5.1.Judas.mp4
+[Fri 13 Jun 05:25:00 BST 2025] Parsed as: {'original_name': 'Demolition.Man.BluRay.1080p.x264.5.1.Judas', 'title': 'Demolition Man BluRay 1080p x264 5 1 Judas', 'year': None, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 05:25:00 BST 2025] ✓ Hard linked: Demolition.Man.BluRay.1080p.x264.5.1.Judas.mp4 -> /mnt/storage/media/movies/Demolition Man BluRay 1080p x264 5 1 Judas/Demolition.Man.BluRay.1080p.x264.5.1.Judas.mp4
+[Fri 13 Jun 05:25:00 BST 2025] Processing: 28 Weeks Later (2007) (1080p BluRay x265 10bit Tigole).mkv
+[Fri 13 Jun 05:25:00 BST 2025] Parsed as: {'original_name': '28 Weeks Later (2007) (1080p BluRay x265 10bit Tigole)', 'title': '28 Weeks Later', 'year': 2007, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 05:25:00 BST 2025] ✓ Hard linked: 28 Weeks Later (2007) (1080p BluRay x265 10bit Tigole).mkv -> /mnt/storage/media/movies/28 Weeks Later (2007)/28 Weeks Later (2007) (1080p BluRay x265 10bit Tigole).mkv
+[Fri 13 Jun 05:25:00 BST 2025] Processing: Trailer.mkv
+[Fri 13 Jun 05:25:00 BST 2025] Parsed as: {'original_name': 'Trailer', 'title': 'Trailer', 'year': None, 'season': None, 'episode': None, 'resolution': '', 'is_tv': False}
+[Fri 13 Jun 05:25:00 BST 2025] ✓ Hard linked: Trailer.mkv -> /mnt/storage/media/movies/Trailer/Trailer.mkv
+[Fri 13 Jun 05:25:00 BST 2025] Processing: Deleted Scenes.mkv
+[Fri 13 Jun 05:25:00 BST 2025] Parsed as: {'original_name': 'Deleted Scenes', 'title': 'Deleted Scenes', 'year': None, 'season': None, 'episode': None, 'resolution': '', 'is_tv': False}
+[Fri 13 Jun 05:25:00 BST 2025] ✓ Hard linked: Deleted Scenes.mkv -> /mnt/storage/media/movies/Deleted Scenes/Deleted Scenes.mkv
+[Fri 13 Jun 05:25:00 BST 2025] Successfully organized 9/9 files
+[Fri 13 Jun 05:25:00 BST 2025] Jellyfin is running - triggering library scan
+[Fri 13 Jun 05:29:38 BST 2025] Manual organization run
+[Fri 13 Jun 05:29:38 BST 2025] Organizing files in: /mnt/storage/downloads/complete
+[Fri 13 Jun 05:29:38 BST 2025] Found 10 video files
+[Fri 13 Jun 05:29:38 BST 2025] Processing: 28 giorni dopo - 28 Days Later (2002) 1080p h264 Ac3 5.1 Ita Eng Sub Ita Eng-MIRCrew.mkv
+[Fri 13 Jun 05:29:38 BST 2025] Parsed as: {'original_name': '28 giorni dopo - 28 Days Later (2002) 1080p h264 Ac3 5.1 Ita Eng Sub Ita Eng-MIRCrew', 'title': '28 giorni dopo 28 Days Later', 'year': 2002, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 05:29:38 BST 2025] ✓ Hard linked: 28 giorni dopo - 28 Days Later (2002) 1080p h264 Ac3 5.1 Ita Eng Sub Ita Eng-MIRCrew.mkv -> /mnt/storage/media/movies/28 giorni dopo 28 Days Later (2002)/28 giorni dopo - 28 Days Later (2002) 1080p h264 Ac3 5.1 Ita Eng Sub Ita Eng-MIRCrew.mkv
+[Fri 13 Jun 05:29:38 BST 2025] Processing: rick.and.morty.s08e01.1080p.web.h264-lazycunts[EZTVx.to].mkv
+[Fri 13 Jun 05:29:38 BST 2025] Parsed as: {'original_name': 'rick.and.morty.s08e01.1080p.web.h264-lazycunts[EZTVx.to]', 'title': 'rick and morty', 'year': None, 'season': 8, 'episode': 1, 'resolution': '1080p', 'is_tv': True}
+[Fri 13 Jun 05:29:38 BST 2025] ✓ Hard linked: rick.and.morty.s08e01.1080p.web.h264-lazycunts[EZTVx.to].mkv -> /mnt/storage/media/tv/rick and morty/Season 08/rick and morty - S08E01.mkv
+[Fri 13 Jun 05:29:38 BST 2025] Processing: rick.and.morty.s08e03.1080p.web.h264-successfulcrab[EZTVx.to].mkv
+[Fri 13 Jun 05:29:38 BST 2025] Parsed as: {'original_name': 'rick.and.morty.s08e03.1080p.web.h264-successfulcrab[EZTVx.to]', 'title': 'rick and morty', 'year': None, 'season': 8, 'episode': 3, 'resolution': '1080p', 'is_tv': True}
+[Fri 13 Jun 05:29:38 BST 2025] ✓ Hard linked: rick.and.morty.s08e03.1080p.web.h264-successfulcrab[EZTVx.to].mkv -> /mnt/storage/media/tv/rick and morty/Season 08/rick and morty - S08E03.mkv
+[Fri 13 Jun 05:29:38 BST 2025] Processing: rick.and.morty.s08e02.1080p.web.h264-successfulcrab[EZTVx.to].mkv
+[Fri 13 Jun 05:29:38 BST 2025] Parsed as: {'original_name': 'rick.and.morty.s08e02.1080p.web.h264-successfulcrab[EZTVx.to]', 'title': 'rick and morty', 'year': None, 'season': 8, 'episode': 2, 'resolution': '1080p', 'is_tv': True}
+[Fri 13 Jun 05:29:38 BST 2025] ✓ Hard linked: rick.and.morty.s08e02.1080p.web.h264-successfulcrab[EZTVx.to].mkv -> /mnt/storage/media/tv/rick and morty/Season 08/rick and morty - S08E02.mkv
+[Fri 13 Jun 05:29:38 BST 2025] Processing: Inception.2010.1080p.BrRip.x264.YIFY.mp4
+[Fri 13 Jun 05:29:38 BST 2025] Parsed as: {'original_name': 'Inception.2010.1080p.BrRip.x264.YIFY', 'title': 'Inception', 'year': 2010, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 05:29:38 BST 2025] ✓ Hard linked: Inception.2010.1080p.BrRip.x264.YIFY.mp4 -> /mnt/storage/media/movies/Inception (2010)/Inception.2010.1080p.BrRip.x264.YIFY.mp4
+[Fri 13 Jun 05:29:38 BST 2025] Processing: Demolition.Man.BluRay.1080p.x264.5.1.Judas.mp4
+[Fri 13 Jun 05:29:38 BST 2025] Parsed as: {'original_name': 'Demolition.Man.BluRay.1080p.x264.5.1.Judas', 'title': 'Demolition Man BluRay 1080p x264 5 1 Judas', 'year': None, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 05:29:38 BST 2025] ✓ Hard linked: Demolition.Man.BluRay.1080p.x264.5.1.Judas.mp4 -> /mnt/storage/media/movies/Demolition Man BluRay 1080p x264 5 1 Judas/Demolition.Man.BluRay.1080p.x264.5.1.Judas.mp4
+[Fri 13 Jun 05:29:38 BST 2025] Processing: 28 Weeks Later (2007) (1080p BluRay x265 10bit Tigole).mkv
+[Fri 13 Jun 05:29:38 BST 2025] Parsed as: {'original_name': '28 Weeks Later (2007) (1080p BluRay x265 10bit Tigole)', 'title': '28 Weeks Later', 'year': 2007, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 05:29:38 BST 2025] ✓ Hard linked: 28 Weeks Later (2007) (1080p BluRay x265 10bit Tigole).mkv -> /mnt/storage/media/movies/28 Weeks Later (2007)/28 Weeks Later (2007) (1080p BluRay x265 10bit Tigole).mkv
+[Fri 13 Jun 05:29:38 BST 2025] Processing: Trailer.mkv
+[Fri 13 Jun 05:29:38 BST 2025] Parsed as: {'original_name': 'Trailer', 'title': 'Trailer', 'year': None, 'season': None, 'episode': None, 'resolution': '', 'is_tv': False}
+[Fri 13 Jun 05:29:38 BST 2025] ✓ Hard linked: Trailer.mkv -> /mnt/storage/media/movies/Trailer/Trailer.mkv
+[Fri 13 Jun 05:29:38 BST 2025] Processing: Deleted Scenes.mkv
+[Fri 13 Jun 05:29:38 BST 2025] Parsed as: {'original_name': 'Deleted Scenes', 'title': 'Deleted Scenes', 'year': None, 'season': None, 'episode': None, 'resolution': '', 'is_tv': False}
+[Fri 13 Jun 05:29:38 BST 2025] ✓ Hard linked: Deleted Scenes.mkv -> /mnt/storage/media/movies/Deleted Scenes/Deleted Scenes.mkv
+[Fri 13 Jun 05:29:38 BST 2025] Processing: Contact.1997.1080p.BluRay.x264.YIFY.mp4
+[Fri 13 Jun 05:29:38 BST 2025] Parsed as: {'original_name': 'Contact.1997.1080p.BluRay.x264.YIFY', 'title': 'Contact', 'year': 1997, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 05:29:38 BST 2025] ✓ Hard linked: Contact.1997.1080p.BluRay.x264.YIFY.mp4 -> /mnt/storage/media/movies/Contact (1997)/Contact.1997.1080p.BluRay.x264.YIFY.mp4
+[Fri 13 Jun 05:29:38 BST 2025] Successfully organized 10/10 files
+[Fri 13 Jun 05:29:38 BST 2025] Jellyfin is running - triggering library scan
+[Fri 13 Jun 05:37:04 BST 2025] Manual organization run
+[Fri 13 Jun 05:37:04 BST 2025] Organizing files in: /mnt/storage/downloads/complete
+[Fri 13 Jun 05:37:04 BST 2025] Found 11 video files
+[Fri 13 Jun 05:37:04 BST 2025] Processing: 28 giorni dopo - 28 Days Later (2002) 1080p h264 Ac3 5.1 Ita Eng Sub Ita Eng-MIRCrew.mkv
+[Fri 13 Jun 05:37:04 BST 2025] Parsed as: {'original_name': '28 giorni dopo - 28 Days Later (2002) 1080p h264 Ac3 5.1 Ita Eng Sub Ita Eng-MIRCrew', 'title': '28 giorni dopo 28 Days Later', 'year': 2002, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 05:37:04 BST 2025] ✓ Hard linked: 28 giorni dopo - 28 Days Later (2002) 1080p h264 Ac3 5.1 Ita Eng Sub Ita Eng-MIRCrew.mkv -> /mnt/storage/media/movies/28 giorni dopo 28 Days Later (2002)/28 giorni dopo - 28 Days Later (2002) 1080p h264 Ac3 5.1 Ita Eng Sub Ita Eng-MIRCrew.mkv
+[Fri 13 Jun 05:37:04 BST 2025] Processing: rick.and.morty.s08e01.1080p.web.h264-lazycunts[EZTVx.to].mkv
+[Fri 13 Jun 05:37:04 BST 2025] Parsed as: {'original_name': 'rick.and.morty.s08e01.1080p.web.h264-lazycunts[EZTVx.to]', 'title': 'rick and morty', 'year': None, 'season': 8, 'episode': 1, 'resolution': '1080p', 'is_tv': True}
+[Fri 13 Jun 05:37:04 BST 2025] ✓ Hard linked: rick.and.morty.s08e01.1080p.web.h264-lazycunts[EZTVx.to].mkv -> /mnt/storage/media/tv/rick and morty/Season 08/rick and morty - S08E01.mkv
+[Fri 13 Jun 05:37:04 BST 2025] Processing: rick.and.morty.s08e03.1080p.web.h264-successfulcrab[EZTVx.to].mkv
+[Fri 13 Jun 05:37:04 BST 2025] Parsed as: {'original_name': 'rick.and.morty.s08e03.1080p.web.h264-successfulcrab[EZTVx.to]', 'title': 'rick and morty', 'year': None, 'season': 8, 'episode': 3, 'resolution': '1080p', 'is_tv': True}
+[Fri 13 Jun 05:37:04 BST 2025] ✓ Hard linked: rick.and.morty.s08e03.1080p.web.h264-successfulcrab[EZTVx.to].mkv -> /mnt/storage/media/tv/rick and morty/Season 08/rick and morty - S08E03.mkv
+[Fri 13 Jun 05:37:04 BST 2025] Processing: rick.and.morty.s08e02.1080p.web.h264-successfulcrab[EZTVx.to].mkv
+[Fri 13 Jun 05:37:04 BST 2025] Parsed as: {'original_name': 'rick.and.morty.s08e02.1080p.web.h264-successfulcrab[EZTVx.to]', 'title': 'rick and morty', 'year': None, 'season': 8, 'episode': 2, 'resolution': '1080p', 'is_tv': True}
+[Fri 13 Jun 05:37:04 BST 2025] ✓ Hard linked: rick.and.morty.s08e02.1080p.web.h264-successfulcrab[EZTVx.to].mkv -> /mnt/storage/media/tv/rick and morty/Season 08/rick and morty - S08E02.mkv
+[Fri 13 Jun 05:37:04 BST 2025] Processing: The.Terminator.1984.1080p.BRrip.x264.GAZ.YIFY.mp4
+[Fri 13 Jun 05:37:04 BST 2025] Parsed as: {'original_name': 'The.Terminator.1984.1080p.BRrip.x264.GAZ.YIFY', 'title': 'The Terminator', 'year': 1984, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 05:37:04 BST 2025] ✓ Hard linked: The.Terminator.1984.1080p.BRrip.x264.GAZ.YIFY.mp4 -> /mnt/storage/media/movies/The Terminator (1984)/The.Terminator.1984.1080p.BRrip.x264.GAZ.YIFY.mp4
+[Fri 13 Jun 05:37:04 BST 2025] Processing: Inception.2010.1080p.BrRip.x264.YIFY.mp4
+[Fri 13 Jun 05:37:04 BST 2025] Parsed as: {'original_name': 'Inception.2010.1080p.BrRip.x264.YIFY', 'title': 'Inception', 'year': 2010, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 05:37:04 BST 2025] ✓ Hard linked: Inception.2010.1080p.BrRip.x264.YIFY.mp4 -> /mnt/storage/media/movies/Inception (2010)/Inception.2010.1080p.BrRip.x264.YIFY.mp4
+[Fri 13 Jun 05:37:04 BST 2025] Processing: Demolition.Man.BluRay.1080p.x264.5.1.Judas.mp4
+[Fri 13 Jun 05:37:04 BST 2025] Parsed as: {'original_name': 'Demolition.Man.BluRay.1080p.x264.5.1.Judas', 'title': 'Demolition Man BluRay 1080p x264 5 1 Judas', 'year': None, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 05:37:04 BST 2025] ✓ Hard linked: Demolition.Man.BluRay.1080p.x264.5.1.Judas.mp4 -> /mnt/storage/media/movies/Demolition Man BluRay 1080p x264 5 1 Judas/Demolition.Man.BluRay.1080p.x264.5.1.Judas.mp4
+[Fri 13 Jun 05:37:04 BST 2025] Processing: 28 Weeks Later (2007) (1080p BluRay x265 10bit Tigole).mkv
+[Fri 13 Jun 05:37:04 BST 2025] Parsed as: {'original_name': '28 Weeks Later (2007) (1080p BluRay x265 10bit Tigole)', 'title': '28 Weeks Later', 'year': 2007, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 05:37:04 BST 2025] ✓ Hard linked: 28 Weeks Later (2007) (1080p BluRay x265 10bit Tigole).mkv -> /mnt/storage/media/movies/28 Weeks Later (2007)/28 Weeks Later (2007) (1080p BluRay x265 10bit Tigole).mkv
+[Fri 13 Jun 05:37:04 BST 2025] Processing: Trailer.mkv
+[Fri 13 Jun 05:37:04 BST 2025] Parsed as: {'original_name': 'Trailer', 'title': 'Trailer', 'year': None, 'season': None, 'episode': None, 'resolution': '', 'is_tv': False}
+[Fri 13 Jun 05:37:04 BST 2025] ✓ Hard linked: Trailer.mkv -> /mnt/storage/media/movies/Trailer/Trailer.mkv
+[Fri 13 Jun 05:37:04 BST 2025] Processing: Deleted Scenes.mkv
+[Fri 13 Jun 05:37:04 BST 2025] Parsed as: {'original_name': 'Deleted Scenes', 'title': 'Deleted Scenes', 'year': None, 'season': None, 'episode': None, 'resolution': '', 'is_tv': False}
+[Fri 13 Jun 05:37:04 BST 2025] ✓ Hard linked: Deleted Scenes.mkv -> /mnt/storage/media/movies/Deleted Scenes/Deleted Scenes.mkv
+[Fri 13 Jun 05:37:04 BST 2025] Processing: Contact.1997.1080p.BluRay.x264.YIFY.mp4
+[Fri 13 Jun 05:37:04 BST 2025] Parsed as: {'original_name': 'Contact.1997.1080p.BluRay.x264.YIFY', 'title': 'Contact', 'year': 1997, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 05:37:04 BST 2025] ✓ Hard linked: Contact.1997.1080p.BluRay.x264.YIFY.mp4 -> /mnt/storage/media/movies/Contact (1997)/Contact.1997.1080p.BluRay.x264.YIFY.mp4
+[Fri 13 Jun 05:37:04 BST 2025] Successfully organized 11/11 files
+[Fri 13 Jun 05:37:04 BST 2025] Jellyfin is running - triggering library scan
+[Fri 13 Jun 05:42:51 BST 2025] Manual organization run
+[Fri 13 Jun 05:42:51 BST 2025] Organizing files in: /mnt/storage/downloads/complete
+[Fri 13 Jun 05:42:51 BST 2025] Found 12 video files
+[Fri 13 Jun 05:42:51 BST 2025] Processing: 28 giorni dopo - 28 Days Later (2002) 1080p h264 Ac3 5.1 Ita Eng Sub Ita Eng-MIRCrew.mkv
+[Fri 13 Jun 05:42:51 BST 2025] Parsed as: {'original_name': '28 giorni dopo - 28 Days Later (2002) 1080p h264 Ac3 5.1 Ita Eng Sub Ita Eng-MIRCrew', 'title': '28 giorni dopo 28 Days Later', 'year': 2002, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 05:42:51 BST 2025] ✓ Hard linked: 28 giorni dopo - 28 Days Later (2002) 1080p h264 Ac3 5.1 Ita Eng Sub Ita Eng-MIRCrew.mkv -> /mnt/storage/media/movies/28 giorni dopo 28 Days Later (2002)/28 giorni dopo - 28 Days Later (2002) 1080p h264 Ac3 5.1 Ita Eng Sub Ita Eng-MIRCrew.mkv
+[Fri 13 Jun 05:42:51 BST 2025] Processing: rick.and.morty.s08e01.1080p.web.h264-lazycunts[EZTVx.to].mkv
+[Fri 13 Jun 05:42:51 BST 2025] Parsed as: {'original_name': 'rick.and.morty.s08e01.1080p.web.h264-lazycunts[EZTVx.to]', 'title': 'rick and morty', 'year': None, 'season': 8, 'episode': 1, 'resolution': '1080p', 'is_tv': True}
+[Fri 13 Jun 05:42:51 BST 2025] ✓ Hard linked: rick.and.morty.s08e01.1080p.web.h264-lazycunts[EZTVx.to].mkv -> /mnt/storage/media/tv/rick and morty/Season 08/rick and morty - S08E01.mkv
+[Fri 13 Jun 05:42:51 BST 2025] Processing: rick.and.morty.s08e03.1080p.web.h264-successfulcrab[EZTVx.to].mkv
+[Fri 13 Jun 05:42:51 BST 2025] Parsed as: {'original_name': 'rick.and.morty.s08e03.1080p.web.h264-successfulcrab[EZTVx.to]', 'title': 'rick and morty', 'year': None, 'season': 8, 'episode': 3, 'resolution': '1080p', 'is_tv': True}
+[Fri 13 Jun 05:42:51 BST 2025] ✓ Hard linked: rick.and.morty.s08e03.1080p.web.h264-successfulcrab[EZTVx.to].mkv -> /mnt/storage/media/tv/rick and morty/Season 08/rick and morty - S08E03.mkv
+[Fri 13 Jun 05:42:51 BST 2025] Processing: rick.and.morty.s08e02.1080p.web.h264-successfulcrab[EZTVx.to].mkv
+[Fri 13 Jun 05:42:51 BST 2025] Parsed as: {'original_name': 'rick.and.morty.s08e02.1080p.web.h264-successfulcrab[EZTVx.to]', 'title': 'rick and morty', 'year': None, 'season': 8, 'episode': 2, 'resolution': '1080p', 'is_tv': True}
+[Fri 13 Jun 05:42:51 BST 2025] ✓ Hard linked: rick.and.morty.s08e02.1080p.web.h264-successfulcrab[EZTVx.to].mkv -> /mnt/storage/media/tv/rick and morty/Season 08/rick and morty - S08E02.mkv
+[Fri 13 Jun 05:42:51 BST 2025] Processing: The.Terminator.1984.1080p.BRrip.x264.GAZ.YIFY.mp4
+[Fri 13 Jun 05:42:51 BST 2025] Parsed as: {'original_name': 'The.Terminator.1984.1080p.BRrip.x264.GAZ.YIFY', 'title': 'The Terminator', 'year': 1984, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 05:42:51 BST 2025] ✓ Hard linked: The.Terminator.1984.1080p.BRrip.x264.GAZ.YIFY.mp4 -> /mnt/storage/media/movies/The Terminator (1984)/The.Terminator.1984.1080p.BRrip.x264.GAZ.YIFY.mp4
+[Fri 13 Jun 05:42:51 BST 2025] Processing: Inception.2010.1080p.BrRip.x264.YIFY.mp4
+[Fri 13 Jun 05:42:51 BST 2025] Parsed as: {'original_name': 'Inception.2010.1080p.BrRip.x264.YIFY', 'title': 'Inception', 'year': 2010, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 05:42:51 BST 2025] ✓ Hard linked: Inception.2010.1080p.BrRip.x264.YIFY.mp4 -> /mnt/storage/media/movies/Inception (2010)/Inception.2010.1080p.BrRip.x264.YIFY.mp4
+[Fri 13 Jun 05:42:51 BST 2025] Processing: Blade Runner (1982) Final Cut 1080p BluRay.x264 SUJAIDR.mp4
+[Fri 13 Jun 05:42:51 BST 2025] Parsed as: {'original_name': 'Blade Runner (1982) Final Cut 1080p BluRay.x264 SUJAIDR', 'title': 'Blade Runner', 'year': 1982, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 05:42:51 BST 2025] ✓ Hard linked: Blade Runner (1982) Final Cut 1080p BluRay.x264 SUJAIDR.mp4 -> /mnt/storage/media/movies/Blade Runner (1982)/Blade Runner (1982) Final Cut 1080p BluRay.x264 SUJAIDR.mp4
+[Fri 13 Jun 05:42:51 BST 2025] Processing: Demolition.Man.BluRay.1080p.x264.5.1.Judas.mp4
+[Fri 13 Jun 05:42:51 BST 2025] Parsed as: {'original_name': 'Demolition.Man.BluRay.1080p.x264.5.1.Judas', 'title': 'Demolition Man BluRay 1080p x264 5 1 Judas', 'year': None, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 05:42:51 BST 2025] ✓ Hard linked: Demolition.Man.BluRay.1080p.x264.5.1.Judas.mp4 -> /mnt/storage/media/movies/Demolition Man BluRay 1080p x264 5 1 Judas/Demolition.Man.BluRay.1080p.x264.5.1.Judas.mp4
+[Fri 13 Jun 05:42:51 BST 2025] Processing: 28 Weeks Later (2007) (1080p BluRay x265 10bit Tigole).mkv
+[Fri 13 Jun 05:42:51 BST 2025] Parsed as: {'original_name': '28 Weeks Later (2007) (1080p BluRay x265 10bit Tigole)', 'title': '28 Weeks Later', 'year': 2007, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 05:42:51 BST 2025] ✓ Hard linked: 28 Weeks Later (2007) (1080p BluRay x265 10bit Tigole).mkv -> /mnt/storage/media/movies/28 Weeks Later (2007)/28 Weeks Later (2007) (1080p BluRay x265 10bit Tigole).mkv
+[Fri 13 Jun 05:42:51 BST 2025] Processing: Trailer.mkv
+[Fri 13 Jun 05:42:51 BST 2025] Parsed as: {'original_name': 'Trailer', 'title': 'Trailer', 'year': None, 'season': None, 'episode': None, 'resolution': '', 'is_tv': False}
+[Fri 13 Jun 05:42:51 BST 2025] ✓ Hard linked: Trailer.mkv -> /mnt/storage/media/movies/Trailer/Trailer.mkv
+[Fri 13 Jun 05:42:51 BST 2025] Processing: Deleted Scenes.mkv
+[Fri 13 Jun 05:42:51 BST 2025] Parsed as: {'original_name': 'Deleted Scenes', 'title': 'Deleted Scenes', 'year': None, 'season': None, 'episode': None, 'resolution': '', 'is_tv': False}
+[Fri 13 Jun 05:42:51 BST 2025] ✓ Hard linked: Deleted Scenes.mkv -> /mnt/storage/media/movies/Deleted Scenes/Deleted Scenes.mkv
+[Fri 13 Jun 05:42:51 BST 2025] Processing: Contact.1997.1080p.BluRay.x264.YIFY.mp4
+[Fri 13 Jun 05:42:51 BST 2025] Parsed as: {'original_name': 'Contact.1997.1080p.BluRay.x264.YIFY', 'title': 'Contact', 'year': 1997, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 05:42:51 BST 2025] ✓ Hard linked: Contact.1997.1080p.BluRay.x264.YIFY.mp4 -> /mnt/storage/media/movies/Contact (1997)/Contact.1997.1080p.BluRay.x264.YIFY.mp4
+[Fri 13 Jun 05:42:51 BST 2025] Successfully organized 12/12 files
+[Fri 13 Jun 05:42:51 BST 2025] Jellyfin is running - triggering library scan
+[Fri 13 Jun 05:49:44 BST 2025] Manual organization run
+[Fri 13 Jun 05:49:44 BST 2025] Organizing files in: /mnt/storage/downloads/complete
+[Fri 13 Jun 05:49:44 BST 2025] Found 13 video files
+[Fri 13 Jun 05:49:44 BST 2025] Processing: 28 giorni dopo - 28 Days Later (2002) 1080p h264 Ac3 5.1 Ita Eng Sub Ita Eng-MIRCrew.mkv
+[Fri 13 Jun 05:49:44 BST 2025] Parsed as: {'original_name': '28 giorni dopo - 28 Days Later (2002) 1080p h264 Ac3 5.1 Ita Eng Sub Ita Eng-MIRCrew', 'title': '28 giorni dopo 28 Days Later', 'year': 2002, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 05:49:44 BST 2025] ✓ Hard linked: 28 giorni dopo - 28 Days Later (2002) 1080p h264 Ac3 5.1 Ita Eng Sub Ita Eng-MIRCrew.mkv -> /mnt/storage/media/movies/28 giorni dopo 28 Days Later (2002)/28 giorni dopo - 28 Days Later (2002) 1080p h264 Ac3 5.1 Ita Eng Sub Ita Eng-MIRCrew.mkv
+[Fri 13 Jun 05:49:44 BST 2025] Processing: rick.and.morty.s08e01.1080p.web.h264-lazycunts[EZTVx.to].mkv
+[Fri 13 Jun 05:49:44 BST 2025] Parsed as: {'original_name': 'rick.and.morty.s08e01.1080p.web.h264-lazycunts[EZTVx.to]', 'title': 'rick and morty', 'year': None, 'season': 8, 'episode': 1, 'resolution': '1080p', 'is_tv': True}
+[Fri 13 Jun 05:49:44 BST 2025] ✓ Hard linked: rick.and.morty.s08e01.1080p.web.h264-lazycunts[EZTVx.to].mkv -> /mnt/storage/media/tv/rick and morty/Season 08/rick and morty - S08E01.mkv
+[Fri 13 Jun 05:49:44 BST 2025] Processing: rick.and.morty.s08e03.1080p.web.h264-successfulcrab[EZTVx.to].mkv
+[Fri 13 Jun 05:49:44 BST 2025] Parsed as: {'original_name': 'rick.and.morty.s08e03.1080p.web.h264-successfulcrab[EZTVx.to]', 'title': 'rick and morty', 'year': None, 'season': 8, 'episode': 3, 'resolution': '1080p', 'is_tv': True}
+[Fri 13 Jun 05:49:44 BST 2025] ✓ Hard linked: rick.and.morty.s08e03.1080p.web.h264-successfulcrab[EZTVx.to].mkv -> /mnt/storage/media/tv/rick and morty/Season 08/rick and morty - S08E03.mkv
+[Fri 13 Jun 05:49:44 BST 2025] Processing: rick.and.morty.s08e02.1080p.web.h264-successfulcrab[EZTVx.to].mkv
+[Fri 13 Jun 05:49:44 BST 2025] Parsed as: {'original_name': 'rick.and.morty.s08e02.1080p.web.h264-successfulcrab[EZTVx.to]', 'title': 'rick and morty', 'year': None, 'season': 8, 'episode': 2, 'resolution': '1080p', 'is_tv': True}
+[Fri 13 Jun 05:49:44 BST 2025] ✓ Hard linked: rick.and.morty.s08e02.1080p.web.h264-successfulcrab[EZTVx.to].mkv -> /mnt/storage/media/tv/rick and morty/Season 08/rick and morty - S08E02.mkv
+[Fri 13 Jun 05:49:44 BST 2025] Processing: Sinners 2025 1080p HDRip HEVC x265-RMTeam.mkv
+[Fri 13 Jun 05:49:44 BST 2025] Parsed as: {'original_name': 'Sinners 2025 1080p HDRip HEVC x265-RMTeam', 'title': 'Sinners', 'year': 2025, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 05:49:44 BST 2025] ✓ Hard linked: Sinners 2025 1080p HDRip HEVC x265-RMTeam.mkv -> /mnt/storage/media/movies/Sinners (2025)/Sinners 2025 1080p HDRip HEVC x265-RMTeam.mkv
+[Fri 13 Jun 05:49:44 BST 2025] Processing: The.Terminator.1984.1080p.BRrip.x264.GAZ.YIFY.mp4
+[Fri 13 Jun 05:49:44 BST 2025] Parsed as: {'original_name': 'The.Terminator.1984.1080p.BRrip.x264.GAZ.YIFY', 'title': 'The Terminator', 'year': 1984, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 05:49:44 BST 2025] ✓ Hard linked: The.Terminator.1984.1080p.BRrip.x264.GAZ.YIFY.mp4 -> /mnt/storage/media/movies/The Terminator (1984)/The.Terminator.1984.1080p.BRrip.x264.GAZ.YIFY.mp4
+[Fri 13 Jun 05:49:44 BST 2025] Processing: Inception.2010.1080p.BrRip.x264.YIFY.mp4
+[Fri 13 Jun 05:49:44 BST 2025] Parsed as: {'original_name': 'Inception.2010.1080p.BrRip.x264.YIFY', 'title': 'Inception', 'year': 2010, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 05:49:44 BST 2025] ✓ Hard linked: Inception.2010.1080p.BrRip.x264.YIFY.mp4 -> /mnt/storage/media/movies/Inception (2010)/Inception.2010.1080p.BrRip.x264.YIFY.mp4
+[Fri 13 Jun 05:49:44 BST 2025] Processing: Blade Runner (1982) Final Cut 1080p BluRay.x264 SUJAIDR.mp4
+[Fri 13 Jun 05:49:44 BST 2025] Parsed as: {'original_name': 'Blade Runner (1982) Final Cut 1080p BluRay.x264 SUJAIDR', 'title': 'Blade Runner', 'year': 1982, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 05:49:44 BST 2025] ✓ Hard linked: Blade Runner (1982) Final Cut 1080p BluRay.x264 SUJAIDR.mp4 -> /mnt/storage/media/movies/Blade Runner (1982)/Blade Runner (1982) Final Cut 1080p BluRay.x264 SUJAIDR.mp4
+[Fri 13 Jun 05:49:44 BST 2025] Processing: Demolition.Man.BluRay.1080p.x264.5.1.Judas.mp4
+[Fri 13 Jun 05:49:44 BST 2025] Parsed as: {'original_name': 'Demolition.Man.BluRay.1080p.x264.5.1.Judas', 'title': 'Demolition Man BluRay 1080p x264 5 1 Judas', 'year': None, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 05:49:44 BST 2025] ✓ Hard linked: Demolition.Man.BluRay.1080p.x264.5.1.Judas.mp4 -> /mnt/storage/media/movies/Demolition Man BluRay 1080p x264 5 1 Judas/Demolition.Man.BluRay.1080p.x264.5.1.Judas.mp4
+[Fri 13 Jun 05:49:44 BST 2025] Processing: 28 Weeks Later (2007) (1080p BluRay x265 10bit Tigole).mkv
+[Fri 13 Jun 05:49:44 BST 2025] Parsed as: {'original_name': '28 Weeks Later (2007) (1080p BluRay x265 10bit Tigole)', 'title': '28 Weeks Later', 'year': 2007, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 05:49:44 BST 2025] ✓ Hard linked: 28 Weeks Later (2007) (1080p BluRay x265 10bit Tigole).mkv -> /mnt/storage/media/movies/28 Weeks Later (2007)/28 Weeks Later (2007) (1080p BluRay x265 10bit Tigole).mkv
+[Fri 13 Jun 05:49:44 BST 2025] Processing: Trailer.mkv
+[Fri 13 Jun 05:49:44 BST 2025] Parsed as: {'original_name': 'Trailer', 'title': 'Trailer', 'year': None, 'season': None, 'episode': None, 'resolution': '', 'is_tv': False}
+[Fri 13 Jun 05:49:44 BST 2025] ✓ Hard linked: Trailer.mkv -> /mnt/storage/media/movies/Trailer/Trailer.mkv
+[Fri 13 Jun 05:49:44 BST 2025] Processing: Deleted Scenes.mkv
+[Fri 13 Jun 05:49:44 BST 2025] Parsed as: {'original_name': 'Deleted Scenes', 'title': 'Deleted Scenes', 'year': None, 'season': None, 'episode': None, 'resolution': '', 'is_tv': False}
+[Fri 13 Jun 05:49:44 BST 2025] ✓ Hard linked: Deleted Scenes.mkv -> /mnt/storage/media/movies/Deleted Scenes/Deleted Scenes.mkv
+[Fri 13 Jun 05:49:44 BST 2025] Processing: Contact.1997.1080p.BluRay.x264.YIFY.mp4
+[Fri 13 Jun 05:49:44 BST 2025] Parsed as: {'original_name': 'Contact.1997.1080p.BluRay.x264.YIFY', 'title': 'Contact', 'year': 1997, 'season': None, 'episode': None, 'resolution': '1080p', 'is_tv': False}
+[Fri 13 Jun 05:49:44 BST 2025] ✓ Hard linked: Contact.1997.1080p.BluRay.x264.YIFY.mp4 -> /mnt/storage/media/movies/Contact (1997)/Contact.1997.1080p.BluRay.x264.YIFY.mp4
+[Fri 13 Jun 05:49:44 BST 2025] Successfully organized 13/13 files
+[Fri 13 Jun 05:49:44 BST 2025] Jellyfin is running - triggering library scan
