@@ -1,0 +1,15 @@
+[Unit]
+Description=Media Server Health Monitor
+After=mediaserver.service
+Wants=mediaserver.service
+
+[Service]
+Type=simple
+ExecStart=/home/matthewhans/mediaserver-enhanced/systemd/monitor-mediaserver.sh
+Restart=always
+RestartSec=60s
+User=matthewhans
+Group=matthewhans
+
+[Install]
+WantedBy=multi-user.target

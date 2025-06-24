@@ -54,7 +54,7 @@ services:
     network_mode: service:wireguard
     depends_on:
       wireguard:
-        condition: service_healthy
+        condition: service_started
     environment:
       - PUID=${PUID}
       - PGID=${PGID}
@@ -86,7 +86,7 @@ services:
     network_mode: service:wireguard
     depends_on:
       wireguard:
-        condition: service_healthy
+        condition: service_started
     environment:
       - PUID=${PUID}
       - PGID=${PGID}
@@ -142,8 +142,8 @@ services:
     container_name: autoheal
     environment:
       - AUTOHEAL_CONTAINER_LABEL=autoheal
-      - AUTOHEAL_INTERVAL=300
-      - AUTOHEAL_START_PERIOD=900
+      - AUTOHEAL_INTERVAL=180
+      - AUTOHEAL_START_PERIOD=600
       - AUTOHEAL_DEFAULT_STOP_TIMEOUT=30
       - WEBHOOK_URL=${AUTOHEAL_WEBHOOK_URL}
     volumes:
@@ -152,7 +152,7 @@ services:
     networks:
       default:
     healthcheck:
-      test: ["CMD", "sh", "-c", "ps aux | grep -v grep | grep -q docker-entrypoint || exit 1"]
+      test: ["CMD", "pgrep", "-f", "docker-entrypoint"]
       interval: 120s
       timeout: 10s
       retries: 3
@@ -180,7 +180,7 @@ services:
     networks:
       default:
     healthcheck:
-      test: ["CMD", "sh", "-c", "ps aux | grep -v grep | grep -q watchtower || exit 1"]
+      test: ["CMD", "pgrep", "watchtower"]
       interval: 300s
       timeout: 15s
       retries: 2

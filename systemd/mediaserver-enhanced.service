@@ -1,0 +1,89 @@
+# Enhanced Media Server Systemd Service with Robust Boot Sequencing
+# =================================================================
+# This service implements a staged boot process to handle WireGuard timing issues
+# and provides comprehensive error recovery for Raspberry Pi environments
+# Install to: /etc/systemd/system/mediaserver-enhanced.service
+
+[Unit]
+Description=Enhanced Media Server with Staged Boot Process
+Documentation=https://github.com/yourusername/mediaserver-enhanced
+After=docker.service network-online.target multi-user.target systemd-resolved.service
+Wants=network-online.target
+Requires=docker.service
+StartLimitIntervalSec=900
+StartLimitBurst=3
+
+[Service]
+Type=forking
+PIDFile=/var/run/mediaserver-enhanced.pid
+RemainAfterExit=yes
+User=root
+Group=root
+WorkingDirectory=/home/matthewhans/mediaserver-enhanced
+
+# Environment configuration
+Environment=COMPOSE_PROJECT_NAME=mediaserver
+Environment=COMPOSE_HTTP_TIMEOUT=600
+Environment=DOCKER_CLIENT_TIMEOUT=600
+Environment=DOCKER_COMPOSE_TIMEOUT=300
+Environment=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+# Pre-start system preparation
+ExecStartPre=-/bin/bash -c 'echo "[%Y-%m-%d %H:%M:%S] Starting mediaserver-enhanced service" | tee -a /var/log/mediaserver-enhanced.log'
+ExecStartPre=-/usr/bin/docker system prune -f --filter "until=24h"
+ExecStartPre=-/usr/bin/docker network prune -f
+ExecStartPre=/bin/bash -c 'if [ \! -f /home/matthewhans/mediaserver-enhanced/docker-compose.yml ]; then echo "ERROR: docker-compose.yml not found"; exit 1; fi'
+ExecStartPre=/bin/bash -c 'mkdir -p /home/matthewhans/mediaserver-enhanced/logs'
+
+# Staged boot process with comprehensive timing
+ExecStart=/home/matthewhans/mediaserver-enhanced/scripts/staged-boot.sh start
+ExecStartPost=-/bin/bash -c 'echo 84042MAINPID > /var/run/mediaserver-enhanced.pid'
+
+# Enhanced stop process
+ExecStop=/home/matthewhans/mediaserver-enhanced/scripts/staged-boot.sh stop
+ExecStopPost=-/usr/bin/docker system prune -f --volumes --filter "label=com.docker.compose.project=mediaserver"
+ExecStopPost=-/bin/rm -f /var/run/mediaserver-enhanced.pid
+
+# Reload for updates
+ExecReload=/home/matthewhans/mediaserver-enhanced/scripts/staged-boot.sh reload
+
+# Robust restart and recovery policies for Pi environments
+Restart=on-failure
+RestartSec=120
+TimeoutStartSec=900
+TimeoutStopSec=300
+TimeoutAbortSec=60
+
+# Security configuration
+NoNewPrivileges=false
+PrivateTmp=false
+ProtectSystem=false
+ReadWritePaths=/home/matthewhans/mediaserver-enhanced /mnt /var/log /tmp /var/run
+
+# Logging and monitoring
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=mediaserver-enhanced
+
+# Service ordering and dependencies
+Before=autoheal.service
+WantedBy=multi-user.target
+
+[Install]
+WantedBy=multi-user.target
+
+# Enhanced Installation Instructions:
+# ==================================
+# 1. Stop existing service: sudo systemctl stop mediaserver.service
+# 2. Disable old service: sudo systemctl disable mediaserver.service
+# 3. Copy this file: sudo cp mediaserver-enhanced.service /etc/systemd/system/
+# 4. Reload systemd: sudo systemctl daemon-reload
+# 5. Enable service: sudo systemctl enable mediaserver-enhanced.service
+# 6. Start service: sudo systemctl start mediaserver-enhanced.service
+# 7. Monitor startup: sudo journalctl -u mediaserver-enhanced.service -f
+#
+# Recovery Commands:
+# - Full restart: sudo systemctl restart mediaserver-enhanced.service
+# - Check detailed status: sudo systemctl status mediaserver-enhanced.service -l
+# - View boot logs: tail -f /home/matthewhans/mediaserver-enhanced/logs/staged-boot.log
+# - Emergency stop: sudo systemctl kill --signal=SIGKILL mediaserver-enhanced.service

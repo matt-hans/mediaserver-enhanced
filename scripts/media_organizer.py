@@ -1,8 +1,7 @@
 #\!/usr/bin/env python3
 """
 Media Organizer with Hard Links - External Storage Version
-Automatically organizes downloaded media files using hard links
-Keeps files in download location for seeding while organizing for Jellyfin
+Fixed version with proper title casing for Jellyfin compatibility
 """
 
 import os
@@ -20,10 +19,6 @@ DOWNLOAD_DIR = Path("/mnt/storage/downloads/complete")
 MOVIES_DIR = Path("/mnt/storage/media/movies")
 TV_DIR = Path("/mnt/storage/media/tv")
 LOG_DIR = Path("/home/matthewhans/mediaserver-enhanced/logs")
-
-# TMDB API (free, no key needed for basic info)
-TMDB_SEARCH_URL = 'https://api.themoviedb.org/3/search/movie'
-TVDB_SEARCH_URL = 'https://api.themoviedb.org/3/search/tv'
 
 # Video file extensions
 VIDEO_EXTENSIONS = {'.mkv', '.mp4', '.avi', '.mov', '.m4v', '.wmv', '.flv', '.webm', '.ts', '.m2ts'}
@@ -43,6 +38,26 @@ class MediaOrganizer:
         
         with open(self.log_file, 'a') as f:
             f.write(log_entry + '\n')
+    
+    def title_case(self, text):
+        """Convert text to proper title case, handling special cases"""
+        # List of words that should remain lowercase
+        lowercase_words = {'a', 'an', 'and', 'as', 'at', 'but', 'by', 'for', 'from', 
+                          'in', 'of', 'on', 'or', 'the', 'to', 'with'}
+        
+        words = text.split()
+        result = []
+        
+        for i, word in enumerate(words):
+            # Always capitalize first and last word
+            if i == 0 or i == len(words) - 1:
+                result.append(word.capitalize())
+            elif word.lower() in lowercase_words:
+                result.append(word.lower())
+            else:
+                result.append(word.capitalize())
+        
+        return ' '.join(result)
     
     def parse_filename(self, filename):
         """Parse filename to extract media information"""
@@ -86,6 +101,9 @@ class MediaOrganizer:
         # Clean up title
         info['title'] = re.sub(r'[\._-]+', ' ', info['title']).strip()
         info['title'] = re.sub(r'\s+', ' ', info['title'])
+        
+        # Apply proper title casing
+        info['title'] = self.title_case(info['title'])
         
         # Extract resolution
         res_match = re.search(resolution_pattern, name, re.IGNORECASE)
@@ -144,6 +162,7 @@ class MediaOrganizer:
         show_dir = TV_DIR / show_name / f"Season {season:02d}"
         
         # Create episode filename with proper formatting
+        # Use title case for the show name in the filename too
         episode_name = f"{show_name} - S{season:02d}E{episode:02d}{file_path.suffix}"
         dest_path = show_dir / episode_name
         
@@ -213,9 +232,7 @@ class MediaOrganizer:
             jellyfin_url = 'http://localhost:8096'
             response = requests.get(f"{jellyfin_url}/health", timeout=5)
             if response.status_code == 200:
-                self.log("Jellyfin is running - triggering library scan")
-                # Note: This would require API key for actual scan
-                # For now, just log that we detected Jellyfin
+                self.log("Jellyfin is running - library scan would be triggered here")
             else:
                 self.log("Jellyfin not accessible for library scan")
         except:
