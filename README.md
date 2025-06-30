@@ -35,11 +35,13 @@ mediaserver-enhanced/
 │   ├── jackett/
 │   └── jellyfin/
 ├── scripts/                    # Automation scripts
-│   ├── setup.sh              # Initial system setup
-│   ├── health-check.sh        # System health monitoring
-│   ├── post-download.sh       # Media organization
-│   ├── backup.sh              # Configuration backup
-│   └── vpn-monitor.sh         # VPN monitoring
+│   ├── torrent_search_multi.py # Multi-indexer torrent search
+│   ├── media_organizer.py      # Automatic media organization
+│   ├── delete_movie.sh         # Interactive content deletion
+│   ├── health-check.sh         # System health monitoring
+│   ├── post-download.sh        # Triggers media organization
+│   ├── backup.sh               # Configuration backup
+│   └── vpn-monitor.sh          # VPN monitoring
 ├── systemd/
 │   └── mediaserver.service    # System service definition
 ├── storage/                    # Media and downloads
@@ -73,8 +75,14 @@ mediaserver-enhanced/
 git clone https://github.com/yourusername/mediaserver-enhanced.git
 cd mediaserver-enhanced
 
-# Run the automated setup script
-sudo ./scripts/setup.sh
+# Install Docker and Docker Compose if not already installed
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+sudo usermod -aG docker $USER
+
+# Create necessary directories
+mkdir -p config/{wireguard,transmission,jackett,jellyfin}
+mkdir -p logs
 ```
 
 ### 2. Configure VPN
@@ -104,14 +112,21 @@ Configure essential settings:
 ### 4. Start Services
 
 ```bash
-# Start the media server
-sudo systemctl start mediaserver
+# Start all services using Docker Compose
+cd /home/matthewhans/mediaserver-enhanced
+docker-compose up -d
 
-# Enable auto-start on boot
-sudo systemctl enable mediaserver
+# Or use the startup script for robust initialization
+bash scripts/start-media-server.sh
 
-# Check status
-sudo systemctl status mediaserver
+# Check running containers
+docker ps
+
+# View logs for all services
+docker-compose logs -f
+
+# View logs for specific service
+docker-compose logs -f [service_name]
 ```
 
 ## 🔧 Configuration
@@ -178,15 +193,49 @@ sudo /opt/mediaserver/scripts/backup.sh
 
 ## 🎬 Media Management
 
+### Searching and Downloading Content
+
+The main functionality comes from the `torrent_search_multi.py` script:
+
+```bash
+# Search across multiple torrent indexers
+python3 scripts/torrent_search_multi.py
+```
+
+Features:
+- Searches across 1337x, EZTV, The Pirate Bay, TheRARBG, and YTS
+- Intelligent filtering to show only relevant results
+- Interactive menu to select and download torrents
+- Automatic integration with Transmission
+- Category filtering (all, movies, TV shows)
+
 ### Automatic Organization
 
-Downloads are automatically organized by type:
+After successful download, the `media_organizer.py` script automatically organizes content:
 
-- **Movies**: `/mnt/media/movies/`
-- **TV Shows**: `/mnt/media/tv/Show Name/Season X/`
-- **Music**: `/mnt/media/music/`
-- **Books**: `/mnt/media/books/`
-- **Other**: `/mnt/media/misc/`
+- **Movies**: `/mnt/storage/media/movies/Movie Name (Year)/`
+- **TV Shows**: `/mnt/storage/media/tv/Show Name/Season XX/`
+- **Music**: `/mnt/storage/media/music/`
+- **Books**: `/mnt/storage/media/books/`
+- **Other**: `/mnt/storage/media/misc/`
+
+The organization happens automatically via the post-download script.
+
+### Deleting Content
+
+To remove downloaded content and free up space:
+
+```bash
+# Interactive deletion tool
+bash scripts/delete_movie.sh
+```
+
+This script:
+- Lists all items in the downloads directory
+- Allows you to select items to delete
+- Searches for related files in the media library
+- Optionally deletes media files after confirmation
+- Triggers Jellyfin library refresh
 
 ### Jellyfin Setup
 
@@ -197,9 +246,13 @@ Downloads are automatically organized by type:
 
 ### Adding Content
 
-1. **Through Jackett**: Configure indexers in Jackett web interface
-2. **Manual**: Drop `.torrent` files in `/mnt/downloads/watch/`
-3. **Transmission**: Add torrents directly via web interface
+1. **Primary Method - Search Script**: 
+   ```bash
+   python3 scripts/torrent_search_multi.py
+   ```
+2. **Through Jackett**: Access Jackett at `http://your-pi-ip:9117`
+3. **Through Transmission**: Access at `http://your-pi-ip:9091` (credentials in .env)
+4. **Manual**: Drop `.torrent` files in `/mnt/storage/downloads/watch/`
 
 ## 🛡️ Security
 
@@ -222,6 +275,37 @@ Downloads are automatically organized by type:
 - Encrypted storage of sensitive configuration
 - Optional anonymous usage statistics
 
+## 🐳 Docker Quick Reference
+
+### Service Management
+```bash
+# Start all services
+cd /home/matthewhans/mediaserver-enhanced && docker-compose up -d
+
+# Stop all services
+docker-compose down
+
+# Restart all services
+docker-compose restart
+
+# View status
+docker ps
+
+# Stop specific service
+docker-compose stop [service_name]
+
+# Start specific service
+docker-compose start [service_name]
+```
+
+### Available Services
+- `wireguard` - VPN gateway
+- `transmission` - BitTorrent client
+- `jackett` - Indexer proxy
+- `jellyfin` - Media server
+- `autoheal` - Container health monitor
+- `watchtower` - Automatic updates
+
 ## 🔧 Troubleshooting
 
 ### Common Issues
@@ -237,11 +321,17 @@ sudo docker logs wireguard
 
 **Services not starting:**
 ```bash
-# Check service status
-sudo systemctl status mediaserver
+# Check Docker container status
+docker ps -a
 
-# View detailed logs
-sudo journalctl -u mediaserver -f
+# View container logs
+docker-compose logs [service_name]
+
+# Restart specific service
+docker-compose restart [service_name]
+
+# Full restart
+docker-compose down && docker-compose up -d
 ```
 
 **Permission errors:**
