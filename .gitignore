@@ -157,3 +157,7 @@ debug_*
 docker-compose.*.backup
 docker-compose.*.broken
 docker-compose.*.pre-*
+
+# Claude
+CLAUDE.md 
+.Claude
