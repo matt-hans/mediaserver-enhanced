@@ -1,304 +1,489 @@
 #!/bin/bash
-# Enhanced interactive media deletion script with comprehensive TV/Movie support
+# Professional-grade media deletion script with surgical precision
+# Version 2.0 - Complete rewrite with hardlink detection and safety features
 
+set -euo pipefail
+
+# Configuration
 DOWNLOADS_DIR="/mnt/storage/downloads/complete"
 MOVIES_DIR="/mnt/storage/media/movies"
 TV_DIR="/mnt/storage/media/tv"
+ALLOWED_ROOTS=("$MOVIES_DIR" "$TV_DIR")
+MAX_DELETIONS_PER_RUN=10
+DELETE_COUNT=0
+DRY_RUN=true
+VERBOSE=false
+LOG_FILE="/tmp/delete_movie_$(date +%Y%m%d_%H%M%S).log"
 
-echo "=== Enhanced Media Deletion Tool ==="
-echo "Scanning downloads directory: $DOWNLOADS_DIR"
-echo
+# Jellyfin configuration
+JELLYFIN_URL="http://localhost:8096"
 
-# Check if downloads directory exists
-if [ ! -d "$DOWNLOADS_DIR" ]; then
-    echo "Error: Downloads directory not found: $DOWNLOADS_DIR"
-    exit 1
-fi
+# Color codes for output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+NC='\033[0m' # No Color
 
-# Simple approach - use ls and process each line
-cd "$DOWNLOADS_DIR" || exit 1
-echo "Available items for deletion:"
-echo "0) Cancel (exit without deleting)"
-
-# Create indexed list
-counter=1
-declare -a items
-while IFS= read -r item; do
-    if [ -n "$item" ]; then
-        items[$counter]="$item"
-        echo "$counter) $item"
-        counter=$((counter + 1))
-    fi
-done < <(ls -1)
-
-if [ ${#items[@]} -eq 0 ]; then
-    echo "No items found in downloads directory."
-    exit 0
-fi
-
-echo
-echo -n "Select item to delete (0-$((counter-1))): "
-read selection
-
-# Validate selection
-if ! [[ "$selection" =~ ^[0-9]+$ ]]; then
-    echo "Invalid selection. Must be a number."
-    exit 1
-fi
-
-if [ "$selection" -eq 0 ]; then
-    echo "Operation cancelled."
-    exit 0
-fi
-
-if [ "$selection" -lt 1 ] || [ "$selection" -ge "$counter" ]; then
-    echo "Invalid selection. Please enter a number between 0 and $((counter-1))."
-    exit 1
-fi
-
-selected_item="${items[$selection]}"
-
-echo
-echo "Selected: $selected_item"
-echo
-
-# Confirm deletion
-echo -n "Are you sure you want to delete \"$selected_item\"? (y/N): "
-read confirm
-if [[ ! "$confirm" =~ ^[Yy]$ ]]; then
-    echo "Operation cancelled."
-    exit 0
-fi
-
-echo
-echo "Deleting: $selected_item"
-
-# Delete from downloads directory
-downloads_path="$DOWNLOADS_DIR/$selected_item"
-if [ -e "$downloads_path" ]; then
-    echo "Removing from downloads: $downloads_path"
-    rm -rf "$downloads_path"
-    if [ $? -eq 0 ]; then
-        echo "✓ Successfully removed from downloads"
-    else
-        echo "✗ Failed to remove from downloads"
-        exit 1
-    fi
-else
-    echo "Item not found in downloads directory"
-    exit 1
-fi
-
-# Enhanced media cleanup function
-cleanup_media_files() {
-    local search_name="$1"
-    local search_dirs=("$MOVIES_DIR" "$TV_DIR")
-    local found_items=()
-    
-    echo
-    echo "=== Comprehensive Media Cleanup ==="
-    echo "Searching for media files related to: $search_name"
-    
-    # Clean and prepare search terms
-    clean_name="$search_name"
-    
-    # Remove year patterns like (2023) or [2023]
-    clean_name=$(echo "$clean_name" | sed 's/[[(][0-9][0-9][0-9][0-9][])]//g')
-    
-    # Remove common release patterns
-    clean_name=$(echo "$clean_name" | sed -E 's/\[[^]]*\]//g')  # Remove [anything]
-    clean_name=$(echo "$clean_name" | sed -E 's/\([^)]*p\)//g')  # Remove (1080p), (720p), etc.
-    clean_name=$(echo "$clean_name" | sed -E 's/(BluRay|HDTV|WEB-DL|x264|x265|HEVC|AAC|AC3|5\.1).*//i')
-    clean_name=$(echo "$clean_name" | sed -E 's/(REPACK|PROPER|UNCUT|EXTENDED|DIRECTORS?|CUT).*//i')
-    
-    # Clean up extra spaces and get meaningful words
-    clean_name=$(echo "$clean_name" | sed 's/[^a-zA-Z0-9 ]/ /g' | sed 's/  */ /g' | sed 's/^ *//' | sed 's/ *$//')
-    
-    echo "Cleaned search name: $clean_name"
-    
-    # Extract search words (minimum 3 characters, maximum 4 words)
-    search_words=()
-    word_count=0
-    for word in $clean_name; do
-        if [ ${#word} -gt 2 ] && [ $word_count -lt 4 ]; then
-            search_words+=("$word")
-            word_count=$((word_count + 1))
-        fi
-    done
-    
-    if [ ${#search_words[@]} -eq 0 ]; then
-        echo "No valid search terms found"
-        return 0
-    fi
-    
-    echo "Search terms: ${search_words[*]}"
-    
-    # Search in both movies and TV directories
-    for search_dir in "${search_dirs[@]}"; do
-        if [ ! -d "$search_dir" ]; then
-            echo "Skipping non-existent directory: $search_dir"
-            continue
-        fi
-        
-        echo "Searching in: $search_dir"
-        
-        # Strategy 1: Exact or near-exact directory name match
-        while IFS= read -r -d '' item; do
-            if [ -n "$item" ] && [[ ! " ${found_items[*]} " =~ " $item " ]]; then
-                found_items+=("$item")
-                echo "  Found (exact match): $item"
-            fi
-        done < <(find "$search_dir" -maxdepth 2 -type d -iname "*$clean_name*" -print0 2>/dev/null)
-        
-        # Strategy 2: Search for individual words
-        for search_word in "${search_words[@]}"; do
-            if [ ${#search_word} -gt 2 ]; then
-                echo "  Searching for word: $search_word"
-                
-                # Find directories containing the search word
-                while IFS= read -r -d '' item; do
-                    if [ -n "$item" ] && [[ ! " ${found_items[*]} " =~ " $item " ]]; then
-                        found_items+=("$item")
-                        echo "    Found: $item"
-                    fi
-                done < <(find "$search_dir" -maxdepth 2 -type d -iname "*$search_word*" -print0 2>/dev/null)
-            fi
-        done
-        
-        # Strategy 3: Combined search for first 2-3 words
-        if [ ${#search_words[@]} -ge 2 ]; then
-            combined_search="${search_words[0]}"
-            if [ ${#search_words[@]} -ge 2 ]; then
-                combined_search+=" ${search_words[1]}"
-            fi
-            if [ ${#search_words[@]} -ge 3 ]; then
-                combined_search+=" ${search_words[2]}"
-            fi
-            
-            echo "  Searching for combined: $combined_search"
-            
-            # Search with wildcards between words
-            combined_pattern=$(echo "$combined_search" | sed 's/ /*/g')
-            while IFS= read -r -d '' item; do
-                if [ -n "$item" ] && [[ ! " ${found_items[*]} " =~ " $item " ]]; then
-                    found_items+=("$item")
-                    echo "    Found (combined): $item"
-                fi
-            done < <(find "$search_dir" -maxdepth 2 -type d -iname "*$combined_pattern*" -print0 2>/dev/null)
-        fi
-        
-        # Strategy 4: Search for files directly (for single episode deletions)
-        for search_word in "${search_words[@]}"; do
-            if [ ${#search_word} -gt 2 ]; then
-                while IFS= read -r -d '' item; do
-                    # Get the parent directory of the file
-                    parent_dir=$(dirname "$item")
-                    if [ -n "$parent_dir" ] && [[ ! " ${found_items[*]} " =~ " $parent_dir " ]]; then
-                        found_items+=("$parent_dir")
-                        echo "    Found (file parent): $parent_dir"
-                    fi
-                done < <(find "$search_dir" -type f -iname "*$search_word*" -print0 2>/dev/null)
-            fi
-        done
-    done
-    
-    # Remove duplicates and sort
-    if [ ${#found_items[@]} -gt 0 ]; then
-        # Convert to unique sorted list
-        IFS=$'\n' sorted_items=($(printf "%s\n" "${found_items[@]}" | sort -u))
-        
-        echo
-        echo "Found ${#sorted_items[@]} unique media item(s):"
-        for i in "${!sorted_items[@]}"; do
-            echo "  $((i+1)). ${sorted_items[i]}"
-            
-            # Show contents if it's a directory
-            if [ -d "${sorted_items[i]}" ]; then
-                file_count=$(find "${sorted_items[i]}" -type f -name "*.mkv" -o -name "*.mp4" -o -name "*.avi" 2>/dev/null | wc -l)
-                dir_size=$(du -sh "${sorted_items[i]}" 2>/dev/null | cut -f1)
-                echo "      ($file_count video files, $dir_size)"
-            fi
-        done
-        
-        echo
-        echo -n "Delete these media items? (y/N): "
-        read confirm_media
-        if [[ "$confirm_media" =~ ^[Yy]$ ]]; then
-            deletion_errors=0
-            for item in "${sorted_items[@]}"; do
-                if [ -e "$item" ]; then
-                    echo "Deleting: $item"
-                    rm -rf "$item"
-                    if [ $? -eq 0 ]; then
-                        echo "✓ Successfully removed: $item"
-                    else
-                        echo "✗ Failed to remove: $item"
-                        deletion_errors=$((deletion_errors + 1))
-                    fi
-                else
-                    echo "⚠ Item no longer exists: $item"
-                fi
-            done
-            
-            # Clean up empty parent directories recursively
-            echo
-            echo "Cleaning up empty directories..."
-            for search_dir in "${search_dirs[@]}"; do
-                if [ -d "$search_dir" ]; then
-                    # Run multiple passes to handle nested empty directories
-                    for pass in {1..5}; do
-                        empty_dirs_removed=$(find "$search_dir" -type d -empty -delete -print 2>/dev/null | wc -l)
-                        if [ $empty_dirs_removed -eq 0 ]; then
-                            break
-                        fi
-                        echo "  Pass $pass: Removed $empty_dirs_removed empty directories"
-                    done
-                fi
-            done
-            
-            if [ $deletion_errors -eq 0 ]; then
-                echo "✓ All media files successfully deleted"
-            else
-                echo "⚠ $deletion_errors errors occurred during deletion"
-            fi
-        else
-            echo "Media deletion cancelled"
-        fi
-    else
-        echo "No matching media files found"
+# Logging function
+log() {
+    local message="$1"
+    echo "$(date '+%Y-%m-%d %H:%M:%S') - $message" >> "$LOG_FILE"
+    if [[ "$VERBOSE" == "true" ]]; then
+        echo -e "${BLUE}[LOG]${NC} $message"
     fi
 }
 
-# Call the enhanced cleanup function
-cleanup_media_files "$selected_item"
+# Error handling
+error_exit() {
+    echo -e "${RED}ERROR: $1${NC}" >&2
+    log "ERROR: $1"
+    exit 1
+}
 
-# Refresh Jellyfin library
-echo
-echo "Triggering Jellyfin library refresh..."
-curl -s -X POST "http://localhost:8096/Library/Refresh" > /dev/null 2>&1
-if [ $? -eq 0 ]; then
-    echo "✓ Jellyfin refresh triggered"
-else
-    echo "⚠ Failed to trigger Jellyfin refresh (service may be down)"
-fi
+# Warning message
+warning() {
+    echo -e "${YELLOW}WARNING: $1${NC}"
+    log "WARNING: $1"
+}
 
-echo
-echo "=== Deletion Process Complete! ==="
+# Success message
+success() {
+    echo -e "${GREEN}✓ $1${NC}"
+    log "SUCCESS: $1"
+}
 
-# Final cleanup verification
-echo
-echo "Performing final cleanup verification..."
-total_freed=0
+# Check if path is under allowed roots
+is_under_allowed_root() {
+    local path="$1"
+    local abspath
+    abspath="$(readlink -f -- "$path" 2>/dev/null)" || return 1
+    
+    for root in "${ALLOWED_ROOTS[@]}"; do
+        local abroot
+        abroot="$(readlink -f -- "$root" 2>/dev/null)" || continue
+        if [[ "$abspath" == "$abroot"* ]]; then
+            return 0
+        fi
+    done
+    return 1
+}
 
-# Check for any remaining empty directories
-for search_dir in "$MOVIES_DIR" "$TV_DIR"; do
-    if [ -d "$search_dir" ]; then
-        empty_count=$(find "$search_dir" -type d -empty 2>/dev/null | wc -l)
-        if [ $empty_count -gt 0 ]; then
-            echo "Found $empty_count empty directories in $search_dir - cleaning up..."
-            find "$search_dir" -type d -empty -delete 2>/dev/null
+# Find exact hardlink match
+find_hardlink_target() {
+    local src="$1"
+    local inode device
+    
+    # Get inode and device of source file
+    if [[ ! -f "$src" ]]; then
+        return 1
+    fi
+    
+    # Get inode number
+    inode=$(stat -c %i "$src" 2>/dev/null) || return 1
+    device=$(stat -c %d "$src" 2>/dev/null) || return 1
+    
+    log "Searching for hardlink with inode $inode on device $device"
+    
+    # Search for files with same inode
+    local matches=()
+    for root in "${ALLOWED_ROOTS[@]}"; do
+        while IFS= read -r -d '' file; do
+            if [[ "$file" != "$src" ]]; then
+                local file_inode file_device
+                file_inode=$(stat -c %i "$file" 2>/dev/null) || continue
+                file_device=$(stat -c %d "$file" 2>/dev/null) || continue
+                if [[ "$file_inode" == "$inode" && "$file_device" == "$device" ]]; then
+                    matches+=("$file")
+                fi
+            fi
+        done < <(find "$root" -type f -print0 2>/dev/null)
+    done
+    
+    if [[ ${#matches[@]} -eq 1 ]]; then
+        echo "${matches[0]}"
+        return 0
+    elif [[ ${#matches[@]} -gt 1 ]]; then
+        warning "Multiple hardlink targets found for: $src"
+        for match in "${matches[@]}"; do
+            warning "  - $match"
+        done
+        return 2
+    fi
+    
+    return 1
+}
+
+# Extract TV episode pattern
+extract_episode_pattern() {
+    local filename="$1"
+    local pattern
+    
+    # Try S##E## pattern
+    pattern=$(echo "$filename" | grep -Eio 's[0-9]{1,2}e[0-9]{1,2}' | head -n1) || true
+    if [[ -n "$pattern" ]]; then
+        echo "$pattern"
+        return 0
+    fi
+    
+    # Try ##x## pattern
+    pattern=$(echo "$filename" | grep -Eio '[0-9]{1,2}x[0-9]{1,2}' | head -n1) || true
+    if [[ -n "$pattern" ]]; then
+        echo "$pattern"
+        return 0
+    fi
+    
+    return 1
+}
+
+# TV episode fallback matching
+find_tv_episode_match() {
+    local src="$1"
+    local basename size pattern
+    
+    basename="$(basename "$src")"
+    size="$(stat -c %s "$src" 2>/dev/null)" || return 1
+    pattern="$(extract_episode_pattern "$basename")" || return 1
+    
+    log "TV fallback: searching for pattern '$pattern' with size $size bytes"
+    
+    local matches=()
+    while IFS= read -r -d '' file; do
+        local file_size
+        file_size="$(stat -c %s "$file" 2>/dev/null)" || continue
+        if [[ "$file_size" -eq "$size" ]]; then
+            matches+=("$file")
+        fi
+    done < <(find "$TV_DIR" -type f -iname "*${pattern}*" -print0 2>/dev/null)
+    
+    if [[ ${#matches[@]} -eq 1 ]]; then
+        echo "${matches[0]}"
+        return 0
+    elif [[ ${#matches[@]} -gt 1 ]]; then
+        warning "Multiple TV episode matches found for pattern $pattern"
+        return 2
+    fi
+    
+    return 1
+}
+
+# Movie fallback matching
+find_movie_match() {
+    local src="$1"
+    local basename size year
+    
+    basename="$(basename "$src")"
+    size="$(stat -c %s "$src" 2>/dev/null)" || return 1
+    
+    # Extract year (prefer last occurrence)
+    year="$(echo "$basename" | grep -Eo '(19|20)[0-9]{2}' | tail -n1)" || return 1
+    
+    log "Movie fallback: searching for year $year with size $size bytes"
+    
+    local matches=()
+    while IFS= read -r -d '' file; do
+        local file_size
+        file_size="$(stat -c %s "$file" 2>/dev/null)" || continue
+        if [[ "$file_size" -eq "$size" ]]; then
+            matches+=("$file")
+        fi
+    done < <(find "$MOVIES_DIR" -type f -path "*/\*($year)\*/*" -print0 2>/dev/null)
+    
+    if [[ ${#matches[@]} -eq 1 ]]; then
+        echo "${matches[0]}"
+        return 0
+    elif [[ ${#matches[@]} -gt 1 ]]; then
+        warning "Multiple movie matches found for year $year"
+        return 2
+    fi
+    
+    return 1
+}
+
+# Delete file with confirmation
+delete_file() {
+    local file="$1"
+    local file_size_mb
+    
+    if [[ ! -e "$file" ]]; then
+        warning "File not found: $file"
+        return 1
+    fi
+    
+    # Check if under allowed roots
+    if ! is_under_allowed_root "$file"; then
+        error_exit "File is outside allowed directories: $file"
+    fi
+    
+    # Get file size in MB
+    file_size_mb=$(du -h "$file" 2>/dev/null | cut -f1)
+    
+    if [[ "$DRY_RUN" == "true" ]]; then
+        echo -e "${YELLOW}[DRY-RUN]${NC} Would delete: $file ($file_size_mb)"
+        log "DRY-RUN: Would delete $file"
+    else
+        rm -f "$file"
+        if [[ $? -eq 0 ]]; then
+            success "Deleted: $file ($file_size_mb)"
+            log "DELETED: $file"
+            ((DELETE_COUNT++))
+            
+            # Clean up empty parent directories
+            local parent_dir="$(dirname "$file")"
+            while [[ "$parent_dir" != "/" ]]; do
+                # Check if directory is empty and safe to remove
+                if [[ -d "$parent_dir" ]] && [[ -z "$(ls -A "$parent_dir" 2>/dev/null)" ]]; then
+                    # Don't remove the root media directories
+                    if [[ "$parent_dir" != "$MOVIES_DIR" && "$parent_dir" != "$TV_DIR" ]]; then
+                        rmdir "$parent_dir" 2>/dev/null && log "Removed empty directory: $parent_dir"
+                    else
+                        break
+                    fi
+                else
+                    break
+                fi
+                parent_dir="$(dirname "$parent_dir")"
+            done
+        else
+            warning "Failed to delete: $file"
+            return 1
         fi
     fi
+    
+    return 0
+}
+
+# Main deletion logic
+process_deletion() {
+    local selected_item="$1"
+    local download_path="$DOWNLOADS_DIR/$selected_item"
+    
+    echo
+    echo "═══════════════════════════════════════════"
+    echo "   PRECISE DELETION MODE"
+    echo "═══════════════════════════════════════════"
+    echo
+    
+    # First, delete from downloads
+    echo "Step 1: Deleting from downloads directory"
+    if [[ -e "$download_path" ]]; then
+        delete_file "$download_path"
+    else
+        warning "Not found in downloads: $download_path"
+    fi
+    
+    # Find corresponding media file
+    echo
+    echo "Step 2: Finding corresponding media file"
+    
+    local media_file=""
+    local match_method=""
+    
+    # Try hardlink detection first
+    if media_file=$(find_hardlink_target "$download_path" 2>/dev/null); then
+        match_method="hardlink"
+        success "Found exact match via hardlink"
+    # Try TV episode pattern
+    elif media_file=$(find_tv_episode_match "$download_path" 2>/dev/null); then
+        match_method="tv-pattern"
+        success "Found TV episode match"
+    # Try movie pattern
+    elif media_file=$(find_movie_match "$download_path" 2>/dev/null); then
+        match_method="movie-pattern"
+        success "Found movie match"
+    else
+        warning "No media file match found"
+        echo "Only the download file was deleted."
+        return 0
+    fi
+    
+    if [[ -n "$media_file" ]]; then
+        echo
+        echo "Match method: $match_method"
+        echo "Media file: $media_file"
+        echo
+        
+        # Confirm before deleting media file
+        if [[ "$DRY_RUN" == "false" ]]; then
+            echo -n "Delete this media file? [y/N]: "
+            read -r response
+            if [[ "$response" =~ ^[Yy]$ ]]; then
+                delete_file "$media_file"
+            else
+                echo "Skipped media file deletion"
+            fi
+        else
+            delete_file "$media_file"
+        fi
+    fi
+    
+    # Check deletion limit
+    if [[ $DELETE_COUNT -ge $MAX_DELETIONS_PER_RUN ]]; then
+        warning "Reached maximum deletions limit ($MAX_DELETIONS_PER_RUN)"
+        echo "Please run the script again if you need to delete more files."
+        exit 0
+    fi
+}
+
+# Trigger Jellyfin library refresh
+refresh_jellyfin() {
+    echo
+    echo "Step 3: Refreshing Jellyfin library"
+    
+    # Trigger library scan
+    if curl -sS -X POST "$JELLYFIN_URL/Library/Refresh" >/dev/null 2>&1; then
+        success "Jellyfin library refresh triggered"
+    else
+        warning "Failed to trigger Jellyfin refresh (service may be down)"
+    fi
+}
+
+# Display usage
+usage() {
+    cat << USAGE
+Usage: $0 [OPTIONS]
+
+Professional media deletion tool with surgical precision.
+
+OPTIONS:
+    --confirm       Execute deletions (default is dry-run mode)
+    --verbose       Show detailed logging
+    --help          Display this help message
+
+SAFETY FEATURES:
+    - Dry-run mode by default (use --confirm to actually delete)
+    - Maximum $MAX_DELETIONS_PER_RUN deletions per run
+    - Precise file matching (no fuzzy search)
+    - Detailed logging to $LOG_FILE
+
+MATCHING METHODS:
+    1. Hardlink detection (exact inode match)
+    2. TV episode pattern (S##E## + file size)
+    3. Movie pattern (year + file size)
+
+USAGE
+    exit 0
+}
+
+# Parse command line arguments
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        --confirm)
+            DRY_RUN=false
+            shift
+            ;;
+        --verbose)
+            VERBOSE=true
+            shift
+            ;;
+        --help)
+            usage
+            ;;
+        *)
+            error_exit "Unknown option: $1 (use --help for usage)"
+            ;;
+    esac
 done
 
-echo "Cleanup verification complete!"
+# Main script
+main() {
+    echo "═══════════════════════════════════════════════════════════"
+    echo "        PROFESSIONAL MEDIA DELETION TOOL v2.0"
+    echo "═══════════════════════════════════════════════════════════"
+    echo
+    
+    if [[ "$DRY_RUN" == "true" ]]; then
+        echo -e "${YELLOW}Running in DRY-RUN mode (no files will be deleted)${NC}"
+        echo -e "${YELLOW}Use --confirm flag to actually delete files${NC}"
+    else
+        echo -e "${RED}DELETION MODE ACTIVE - Files will be permanently deleted!${NC}"
+    fi
+    
+    echo
+    log "Script started - DRY_RUN=$DRY_RUN"
+    
+    # Check if downloads directory exists
+    if [[ ! -d "$DOWNLOADS_DIR" ]]; then
+        error_exit "Downloads directory not found: $DOWNLOADS_DIR"
+    fi
+    
+    # List available items
+    echo "Scanning downloads directory: $DOWNLOADS_DIR"
+    echo
+    
+    # Create array of items
+    mapfile -t items < <(ls -1 "$DOWNLOADS_DIR" 2>/dev/null)
+    
+    if [[ ${#items[@]} -eq 0 ]]; then
+        echo "No items found in downloads directory."
+        exit 0
+    fi
+    
+    echo "Available items:"
+    echo "0) Exit"
+    for i in "${!items[@]}"; do
+        local item_size
+        item_size=$(du -sh "$DOWNLOADS_DIR/${items[$i]}" 2>/dev/null | cut -f1)
+        printf "%3d) %s [%s]\n" $((i+1)) "${items[$i]}" "$item_size"
+    done
+    
+    echo
+    echo -n "Select item to delete (0-${#items[@]}): "
+    read -r selection
+    
+    # Validate selection
+    if [[ ! "$selection" =~ ^[0-9]+$ ]]; then
+        error_exit "Invalid selection: must be a number"
+    fi
+    
+    if [[ $selection -eq 0 ]]; then
+        echo "Operation cancelled."
+        exit 0
+    fi
+    
+    if [[ $selection -lt 1 || $selection -gt ${#items[@]} ]]; then
+        error_exit "Invalid selection: out of range"
+    fi
+    
+    # Get selected item
+    local selected_item="${items[$((selection-1))]}"
+    
+    echo
+    echo "Selected: $selected_item"
+    echo
+    
+    # Confirm selection
+    echo -n "Proceed with deletion analysis? [y/N]: "
+    read -r response
+    if [[ ! "$response" =~ ^[Yy]$ ]]; then
+        echo "Operation cancelled."
+        exit 0
+    fi
+    
+    # Process deletion
+    process_deletion "$selected_item"
+    
+    # Refresh Jellyfin
+    refresh_jellyfin
+    
+    echo
+    echo "═══════════════════════════════════════════════════════════"
+    echo "                   OPERATION COMPLETE"
+    echo "═══════════════════════════════════════════════════════════"
+    
+    if [[ "$DRY_RUN" == "true" ]]; then
+        echo
+        echo -e "${YELLOW}This was a dry-run. No files were actually deleted.${NC}"
+        echo -e "${YELLOW}Run with --confirm flag to perform actual deletion.${NC}"
+    else
+        echo
+        success "Files deleted: $DELETE_COUNT"
+    fi
+    
+    echo
+    echo "Log file: $LOG_FILE"
+    log "Script completed - Files deleted: $DELETE_COUNT"
+}
+
+# Run main function
+main
